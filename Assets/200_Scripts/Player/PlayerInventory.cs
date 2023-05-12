@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
+ 
 
     public List<Item> Inventory;
 
@@ -17,6 +18,9 @@ public class PlayerInventory : MonoBehaviour
 
 
     public GameObject projectile;
+
+    public float TotalWeight = 0;
+
 
     private void Start()
     {
@@ -51,6 +55,7 @@ public class PlayerInventory : MonoBehaviour
             var projectilePosition = new Vector2(Random.Range(-5,5), Random.Range(-5,5));
             Instantiate(projectile,projectilePosition, Quaternion.identity);
 
+            CalculateTotalWeight();
         }
     }
 
@@ -92,6 +97,7 @@ public class PlayerInventory : MonoBehaviour
             //ajouter à la liste de l'inventaire et detruire l'objet
             Destroy(premierObjet);
             Inventory.Add(CurrentItemRef);
+            CalculateTotalWeight();
 
             // Retirez le premier objet de la liste
             objetsEnCollision.Remove(premierObjet);
@@ -99,4 +105,21 @@ public class PlayerInventory : MonoBehaviour
     }
 
 
+    //Calcul du total de poids
+
+    private float CalculateTotalWeight()
+    {
+
+        float TotalWeight = 0f;
+
+        foreach (Item item in Inventory)
+        {
+            TotalWeight += item.weight;
+            
+        }
+        Debug.Log(TotalWeight);
+        return TotalWeight;
+
+
+    }
 }
