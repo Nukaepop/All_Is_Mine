@@ -5,18 +5,22 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
 
-    public List<string> Inventory;
+    public List<Item> Inventory;
 
     private bool pickUpAllowed;
 
     private GameObject currentGameObject;
     private string CurrentObjectRef;
-
+    private Item CurrentItemRef;
+ 
     List<GameObject> objetsEnCollision;
+
+
+    public GameObject projectile;
 
     private void Start()
     {
-        Inventory = new List<string>();
+        Inventory = new List<Item>();
 
         objetsEnCollision = new List<GameObject>();
 
@@ -33,6 +37,21 @@ public class PlayerInventory : MonoBehaviour
             CollectObjects();
 
         }
+
+        // Faire apparaitre un objet présent dans le sac
+
+        if ((Input.GetKeyDown(KeyCode.F)) && (Inventory.Count !=0))
+        {
+
+            // Prendre un item aléatoire dans le sac
+        Item ItemALancer = Inventory[(Random.Range(0, Inventory.Count))];
+            Inventory.Remove(ItemALancer);
+        projectile = ItemALancer.Object;
+
+            var projectilePosition = new Vector2(Random.Range(-5,5), Random.Range(-5,5));
+            Instantiate(projectile,projectilePosition, Quaternion.identity);
+
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -46,6 +65,7 @@ public class PlayerInventory : MonoBehaviour
 
             //Obtenir les refs de l'objet sur lequel on est actuellement
             CurrentObjectRef = collision.gameObject.GetComponent<Collectibles>().propRef;
+            CurrentItemRef = collision.gameObject.GetComponent<ItemController>().Item;
         }
     }
 
@@ -71,8 +91,7 @@ public class PlayerInventory : MonoBehaviour
 
             //ajouter à la liste de l'inventaire et detruire l'objet
             Destroy(premierObjet);
-            Inventory.Add(CurrentObjectRef);
-
+            Inventory.Add(CurrentItemRef);
 
             // Retirez le premier objet de la liste
             objetsEnCollision.Remove(premierObjet);

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81eb51b5edeee6344a5c489ae74637b8, type: 3}
+  m_Name: Machin
+  m_EditorClassIdentifier: 
+  id: 1
+  itemName: Machin
+  value: 10
+  Object: {fileID: 7992054442429218181, guid: 487b259df76b87847905b0c20281e81c, type: 3}
+  weight: 5
