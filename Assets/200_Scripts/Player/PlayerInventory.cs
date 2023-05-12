@@ -96,6 +96,11 @@ public class PlayerInventory : MonoBehaviour
             // Retirez le premier objet de la liste
             objetsEnCollision.Remove(premierObjet);
         }
+
+
+        //Calculer le poids total des items dans le sac
+
+
     }
 
 
