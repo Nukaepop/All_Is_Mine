@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Bidule
   value: 10
   Object: {fileID: 7992054442429218181, guid: c8835d3b02571794e8b39c945dd34c92, type: 3}
-  weight: 1
+  weight: 4

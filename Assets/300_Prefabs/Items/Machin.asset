@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Machin
   value: 10
   Object: {fileID: 7992054442429218181, guid: 487b259df76b87847905b0c20281e81c, type: 3}
-  weight: 5
+  weight: 12
