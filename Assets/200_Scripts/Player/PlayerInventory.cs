@@ -20,7 +20,7 @@ public class PlayerInventory : MonoBehaviour
     public int bagSize;
     public Transform BagTransform;
 
-
+    public bool canPickup = true;
 
     #region GestionDesItemsDansLeSac
 
@@ -31,13 +31,14 @@ public class PlayerInventory : MonoBehaviour
 
         objetsEnCollision = new List<GameObject>();
 
+        canPickup = true;
     }
 
     private void Update()
     {
         //Ramasser quand on appuie sur E et qu'on est dans la zone de trigger
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && canPickup)
         {
 
             CollectObjects();

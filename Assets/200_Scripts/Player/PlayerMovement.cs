@@ -14,6 +14,10 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode sprintKey = KeyCode.X;
     public KeyCode rollKey = KeyCode.C;
 
+    [Header("ScriptRefs")]
+
+    public PlayerInventory InventoryScript;
+
     [Header("Walk")]
 
     private float moveSpeed;
@@ -129,12 +133,14 @@ public class PlayerMovement : MonoBehaviour
 
         // Effectuer les actions nécessaires pour la roulade (animations, mouvements, etc.)
         isInvincible = true;
+        InventoryScript.canPickup = false;
         spriteRenderer.color = Color.yellow;
 
 
         yield return new WaitForSeconds(rollDuration);
 
         isRolling = false;
+        InventoryScript.canPickup = true;
         dashDirection = Vector2.zero;
         spriteRenderer.color = baseColor;
     }
