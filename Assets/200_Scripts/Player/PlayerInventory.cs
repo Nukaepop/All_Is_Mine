@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
+ 
 
     public List<Item> Inventory;
 
-    private bool pickUpAllowed;
-
-    private GameObject currentGameObject;
-    private string CurrentObjectRef;
     private Item CurrentItemRef;
  
     List<GameObject> objetsEnCollision;
@@ -18,20 +15,30 @@ public class PlayerInventory : MonoBehaviour
 
     public GameObject projectile;
 
+    public float TotalWeight = 0f;
+
+    public int bagSize;
+    public Transform BagTransform;
+
+    public bool canPickup = true;
+
+    #region GestionDesItemsDansLeSac
+
+
     private void Start()
     {
         Inventory = new List<Item>();
 
         objetsEnCollision = new List<GameObject>();
 
+        canPickup = true;
     }
 
     private void Update()
     {
-
         //Ramasser quand on appuie sur E et qu'on est dans la zone de trigger
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && canPickup)
         {
 
             CollectObjects();
@@ -42,16 +49,16 @@ public class PlayerInventory : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.F)) && (Inventory.Count !=0))
         {
-
-            // Prendre un item aléatoire dans le sac
-        Item ItemALancer = Inventory[(Random.Range(0, Inventory.Count))];
-            Inventory.Remove(ItemALancer);
-        projectile = ItemALancer.Object;
-
-            var projectilePosition = new Vector2(Random.Range(-5,5), Random.Range(-5,5));
-            Instantiate(projectile,projectilePosition, Quaternion.identity);
-
+            ThrowObjects();
         }
+
+
+
+
+}
+    private void LateUpdate()
+    {
+        BagTransform.localScale = new Vector3(0.7f + bagSize * 0.4f, 0.7f + bagSize * 0.4f, 0.7f + bagSize * 0.4f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -64,7 +71,7 @@ public class PlayerInventory : MonoBehaviour
 
 
             //Obtenir les refs de l'objet sur lequel on est actuellement
-            CurrentObjectRef = collision.gameObject.GetComponent<Collectibles>().propRef;
+            
             CurrentItemRef = collision.gameObject.GetComponent<ItemController>().Item;
         }
     }
@@ -84,6 +91,8 @@ public class PlayerInventory : MonoBehaviour
 
     void CollectObjects()
     {
+        Debug.Log("Appel");
+
         if (objetsEnCollision.Count > 0)
         {
             GameObject premierObjet = objetsEnCollision[0];
@@ -92,6 +101,9 @@ public class PlayerInventory : MonoBehaviour
             //ajouter à la liste de l'inventaire et detruire l'objet
             Destroy(premierObjet);
             Inventory.Add(CurrentItemRef);
+            TotalWeight = CalculateTotalWeight();
+            bagSize = CalculateBagSize();
+
 
             // Retirez le premier objet de la liste
             objetsEnCollision.Remove(premierObjet);
@@ -102,6 +114,80 @@ public class PlayerInventory : MonoBehaviour
 
 
     }
+
+    void ThrowObjects()
+    {
+
+        // Prendre un item aléatoire dans le sac
+        Item ItemALancer = Inventory[(Random.Range(0, Inventory.Count))];
+        Inventory.Remove(ItemALancer);
+        projectile = ItemALancer.Object;
+
+        var projectilePosition = new Vector2(Random.Range(-5, 5), Random.Range(-5, 5));
+        Instantiate(projectile, projectilePosition, Quaternion.identity);
+
+        TotalWeight = CalculateTotalWeight();
+        bagSize = CalculateBagSize();
+    }
+
+    #endregion
+
+    #region CalculDuPoids
+
+    //Calcul du total de poids
+
+    public float CalculateTotalWeight()
+    {
+        float _TotalWeight = 0f;
+
+        foreach (Item item in Inventory)
+        {
+            _TotalWeight += item.weight;
+            
+        }
+
+        Debug.Log( "Poids total " + _TotalWeight);
+        TotalWeight = _TotalWeight;
+        return TotalWeight;
+
+    }
+
+
+    // Fonction qui calcule dans quel categorie de poids se situe notre sac
+    public int CalculateBagSize()
+    {
+        int _bagSize = 0;
+
+        if (TotalWeight < 5)
+        {
+            _bagSize = 0;
+        }
+        else if (TotalWeight >= 5 && TotalWeight < 10)
+        {
+            _bagSize = 1;
+        }
+        else if (TotalWeight >= 10 && TotalWeight < 15)
+        {
+            _bagSize = 2;
+        }
+        else if (TotalWeight >= 15 && TotalWeight < 20)
+        {
+            _bagSize = 3;
+        }
+        else
+        {
+            _bagSize = 4;
+        }
+
+        Debug.Log("taille du sac " + _bagSize);
+
+        bagSize = _bagSize;
+        return bagSize;
+    }
+
+
+    #endregion
+
 
 
 }
