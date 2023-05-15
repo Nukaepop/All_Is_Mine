@@ -830,6 +830,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: baseMaxStamina
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: currentStamina
       value: 100
       objectReference: {fileID: 0}

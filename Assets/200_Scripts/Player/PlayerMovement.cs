@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     public float MaxStamina;
     public float currentStamina;
     public float staminaRecoveryRate;
+    public float baseMaxStamina;
 
 
     private bool hasStamina = true;
@@ -156,6 +157,8 @@ public class PlayerMovement : MonoBehaviour
                 hasStamina = true;
             }
         }
+
+        MaxStamina = baseMaxStamina - InventoryScript.bagSize * 15;
 
     }
 
