@@ -412,6 +412,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d9967266fd49334eaa35716dc1d5ffc, type: 3}
+--- !u!114 &1918965823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6754937888544410552, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+  m_PrefabInstance: {fileID: 917037198844540307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc785c3fbfc2cd640aabef98538f8bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &1918965827 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 917037197784156786, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
@@ -519,11 +530,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: dashSpeed
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: SprintSpeed
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: rollDuration
@@ -533,6 +544,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1918965827}
+    - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: InventoryScript
+      value: 
+      objectReference: {fileID: 1918965823}
     - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: invincibilityDuration
       value: 0.25
