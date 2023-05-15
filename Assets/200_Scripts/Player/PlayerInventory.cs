@@ -91,29 +91,23 @@ public class PlayerInventory : MonoBehaviour
 
     void CollectObjects()
     {
-        Debug.Log("Appel");
-
         if (objetsEnCollision.Count > 0)
         {
-            GameObject premierObjet = objetsEnCollision[0];
-            // Faites quelque chose avec le premier objet collectible (par exemple, le détruire)
+            List<GameObject> objetsCopie = new List<GameObject>(objetsEnCollision);
 
-            //ajouter à la liste de l'inventaire et detruire l'objet
-            Destroy(premierObjet);
-            Inventory.Add(CurrentItemRef);
-            TotalWeight = CalculateTotalWeight();
-            bagSize = CalculateBagSize();
-
-
-            // Retirez le premier objet de la liste
-            objetsEnCollision.Remove(premierObjet);
+            foreach (GameObject obj in objetsCopie)
+            {
+                Item item = obj.GetComponent<ItemController>().Item;
+                Inventory.Add(item);
+                TotalWeight = CalculateTotalWeight();
+                bagSize = CalculateBagSize();
+                Destroy(obj);
+                objetsEnCollision.Remove(obj);
+            }
         }
-
-
-        //Calculer le poids total des items dans le sac
-
-
     }
+
+
 
     void ThrowObjects()
     {

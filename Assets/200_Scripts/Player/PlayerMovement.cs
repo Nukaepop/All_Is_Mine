@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [Header("Keybinds")]
+
     public KeyCode MoveUpKey = KeyCode.UpArrow;
     public KeyCode MoveLeftKey = KeyCode.LeftArrow;
     public KeyCode MoveRightKey = KeyCode.RightArrow;
@@ -14,9 +15,11 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode sprintKey = KeyCode.X;
     public KeyCode rollKey = KeyCode.C;
 
+
     [Header("ScriptRefs")]
 
     public PlayerInventory InventoryScript;
+
 
     [Header("Walk")]
 
@@ -27,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sprint")]
 
     public float SprintSpeed;
+    public float SprintStaminaCostRate;
+
 
     [Header("Roll")]
 
@@ -34,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isRolling = false;
     private Vector2 dashDirection;
     public float dashSpeed;
+    public float RollStaminaCost;
+
 
     [Header("General")]
 
@@ -45,11 +52,23 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 moveDirection;
 
+
+    [Header("Stamina")]
+
+    public float MaxStamina;
+    public float currentStamina;
+    public float staminaRecoveryRate;
+
+
+    private bool hasStamina = true;
+    private bool isUsingStamina = false;
+
     [Header("Invincibility")]
 
     public bool isInvincible = false;
     public float invincibilityDuration;
     public float invincibilityTimer;
+
 
     [Header("MovementState")]
 
@@ -63,29 +82,41 @@ public class PlayerMovement : MonoBehaviour
 
 
 
+
+
     private void StateHandler()
     {
         if(isRolling)
         {
             State = MovementState.Rolling;
+
+
+            isUsingStamina = true;
         }
-        else if(Input.GetKey(sprintKey))
+        else if(Input.GetKey(sprintKey) && hasStamina)
         {
             State = MovementState.Sprinting;
             moveSpeed = SprintSpeed;
             spriteRenderer.color = Color.magenta;
+
+            currentStamina -= (SprintStaminaCostRate * Time.deltaTime);
+            isUsingStamina = true;
         }
         else
         {
             State = MovementState.Walking;
             moveSpeed = WalkSpeed;
             spriteRenderer.color = baseColor;
+
+            isUsingStamina = false;
         }
     }
 
     private void Start()
     {
         baseColor = spriteRenderer.color;
+        currentStamina = MaxStamina;
+        hasStamina = true;
     }
 
     // Update is called once per frame
@@ -104,6 +135,28 @@ public class PlayerMovement : MonoBehaviour
                 invincibilityTimer = 0f;
             }
         }
+
+        if (currentStamina <= 0)
+        {
+            hasStamina = false;
+        }
+
+        if (!isUsingStamina)
+        {
+            currentStamina += (staminaRecoveryRate * Time.deltaTime);
+        }
+
+         if(currentStamina>=MaxStamina)
+        {
+
+            currentStamina = MaxStamina;
+
+            if (!hasStamina)
+            {
+                hasStamina = true;
+            }
+        }
+
     }
 
     private void FixedUpdate()
@@ -119,7 +172,7 @@ public class PlayerMovement : MonoBehaviour
 
         moveDirection = new Vector2(moveX, moveY).normalized;
 
-        if(Input.GetKeyDown(rollKey) && !isRolling)
+        if(Input.GetKeyDown(rollKey) && !isRolling && hasStamina)
         {
             dashDirection = GetDashDirection();
             StartCoroutine(PerformRoll());
@@ -130,6 +183,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator PerformRoll()
     {
         isRolling = true;
+        currentStamina -= RollStaminaCost;
 
         // Effectuer les actions nécessaires pour la roulade (animations, mouvements, etc.)
         isInvincible = true;
@@ -182,4 +236,5 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
         }   
     }
+
 }
