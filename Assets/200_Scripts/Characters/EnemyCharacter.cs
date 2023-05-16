@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class EnemyCharacter : Character
 {
-    public override void TakeDamage(int damage)
+
+    public PlayerAttack playerAttackScript;
+
+    public override void TakeDamage(float damage)
     {
         // Logique spécifique pour les personnages ennemis lorsqu'ils subissent des dégâts
         base.TakeDamage(damage); // Appel à la méthode de la classe de base pour gérer les points de vie
         // Autres actions spécifiques aux ennemis
+        if(health <=0)
+        {
+            Destroy(gameObject);
+            Debug.Log("Enemy Died"); 
+        }
     }
 
-    public override void Heal(int amount)
+    public override void Heal(float amount)
     {
         // Les personnages ennemis ne peuvent généralement pas être soignés, cette méthode peut être laissée vide
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Weapon")
+        {
+            float damage = playerAttackScript.PlayerDamage;
+            TakeDamage(damage);
+            Debug.Log("Enemy Hit");
+        }
+    }
+
 }

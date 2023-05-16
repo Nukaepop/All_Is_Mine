@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    protected int health;
+    public float health;
 
-    public virtual void TakeDamage(int damage)
+    public virtual void TakeDamage(float damage)
     {
         // Logique pour réduire les points de vie du personnage
 
@@ -17,7 +17,7 @@ public class Character : MonoBehaviour
 
     }
 
-    public virtual void Heal(int amount)
+    public virtual void Heal(float amount)
     {
         // Logique pour soigner le personnage
         health += amount;
