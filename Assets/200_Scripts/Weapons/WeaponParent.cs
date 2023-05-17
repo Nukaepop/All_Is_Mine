@@ -8,25 +8,38 @@ public class WeaponParent : MonoBehaviour
     public SpriteRenderer characterRenderer, weaponRenderer;
 
     public Animator animator;
-    public float delay = 0.3f;
-    private bool cantAttack;
+    private float delay;
+    public float baseDelay;
     public Transform TransformWeaponParent;
 
+
+    public float AttackDamage;
+
+
+    public bool isAttacking { get; private set; }
+
+    public void ResetIsAttacking()
+    {
+        isAttacking = false;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+ 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - TransformWeaponParent.position;
-        difference.Normalize();
-        float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        TransformWeaponParent.rotation = Quaternion.Euler(0f, 0f, rotation_z);
-       
+        if (!isAttacking)
+        {
+            //arme qui suis la souris
+            Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - TransformWeaponParent.position;
+            difference.Normalize();
+            float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            TransformWeaponParent.rotation = Quaternion.Euler(0f, 0f, rotation_z);
+        }
         //rotate le sprite de l'arme en fonction du coté de notre curseur sur l'axe x
 
         Vector2 scale = TransformWeaponParent.localScale;
@@ -58,23 +71,22 @@ public class WeaponParent : MonoBehaviour
             Attack();
         }
 
+        if(delay > 0)
+        {
+            delay -= Time.deltaTime;
+        }
+
     }
 
     public void Attack()
     {
-        if (cantAttack)
-            return;
-
-        animator.SetTrigger("Attack");
-        Debug.Log("Attacking");
-        cantAttack = true;
-        StartCoroutine(DelayAttack());
+        if (delay <= 0)
+        {
+            animator.SetTrigger("Attack");
+            isAttacking = true;
+            delay = baseDelay;
+        }
     }
 
-    private IEnumerator DelayAttack()
-    {
-        yield return new WaitForSeconds(delay);
-        cantAttack = false;
-    }
 
 }
