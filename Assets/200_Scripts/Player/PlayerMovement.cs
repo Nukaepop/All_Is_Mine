@@ -50,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
     public Color baseColor;
     public Color currentColor;
 
+    public WeaponParent weaponParentScript;
+
     public Vector2 moveDirection;
 
 
@@ -181,7 +183,12 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(PerformRoll());
         }
 
+
+
     }
+
+
+
 
     private IEnumerator PerformRoll()
     {
