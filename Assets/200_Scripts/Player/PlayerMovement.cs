@@ -7,13 +7,13 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Keybinds")]
 
-    public KeyCode MoveUpKey = KeyCode.UpArrow;
-    public KeyCode MoveLeftKey = KeyCode.LeftArrow;
-    public KeyCode MoveRightKey = KeyCode.RightArrow;
-    public KeyCode MoveDownKey = KeyCode.DownArrow;
+    private KeyCode MoveUpKey = KeyCode.Z;
+    private KeyCode MoveLeftKey = KeyCode.Q;
+    private KeyCode MoveRightKey = KeyCode.D;
+    private KeyCode MoveDownKey = KeyCode.S;
 
-    public KeyCode sprintKey = KeyCode.X;
-    public KeyCode rollKey = KeyCode.C;
+    private KeyCode sprintKey = KeyCode.LeftShift;
+    private KeyCode rollKey = KeyCode.Space;
 
 
     [Header("ScriptRefs")]

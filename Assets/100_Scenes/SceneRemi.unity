@@ -148,15 +148,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143273309}
-  m_LocalRotation: {x: 0, y: 0, z: 0.92387956, w: 0.38268343}
-  m_LocalPosition: {x: -0.7, y: -0.7, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: -0.7, y: 0.7, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1362716608}
   m_Father: {fileID: 1080354304}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 135}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!58 &143273311
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1167,6 +1167,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: MoveUpKey
+      value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: WalkSpeed
       value: 5
       objectReference: {fileID: 0}
@@ -1179,8 +1183,20 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: MoveDownKey
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: MoveLeftKey
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: SprintSpeed
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: MoveRightKey
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: rollDuration
@@ -1351,4 +1367,17 @@ MonoBehaviour:
   meleeSpeed: 0.5
   damage: 10
   PlayerDamage: 10
+  playerMovementScript: {fileID: 917037198844540314}
   playerInventoryScript: {fileID: 1918965823}
+  playerTransform: {fileID: 1918965828}
+--- !u!114 &917037198844540314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+  m_PrefabInstance: {fileID: 917037198844540307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917037198844540308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5b78ac4ed3be141b5629ebf6ca377a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
