@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyCharacter : Character
 {
 
-    public PlayerAttack playerAttackScript;
+    // public PlayerAttack playerAttackScript;
 
     public override void TakeDamage(float damage)
     {
@@ -26,12 +26,12 @@ public class EnemyCharacter : Character
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Weapon")
-        {
-            float damage = playerAttackScript.PlayerDamage;
-            TakeDamage(damage);
-            Debug.Log("Enemy Hit");
-        }
+       // if (other.tag == "Weapon")
+       // {
+       //      float damage = playerAttackScript.PlayerDamage;
+       //    TakeDamage(damage);
+       //    Debug.Log("Enemy Hit");
+        // }
     }
 
 }
