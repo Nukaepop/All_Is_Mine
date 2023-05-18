@@ -10,8 +10,10 @@ public class WeaponParent : MonoBehaviour
     public Animator animator;
     private float delay;
     public float baseDelay;
-    public Transform TransformWeaponParent;
+    public float attackDelay;
 
+    public Transform TransformWeaponParent;
+    public PlayerInventory playerInventoryScript;
 
     public float AttackDamage;
 
@@ -27,6 +29,12 @@ public class WeaponParent : MonoBehaviour
     void Start()
     {
  
+    }
+
+    private void LateUpdate()
+    {
+        attackDelay = baseDelay + playerInventoryScript.bagSize * 0.3f;
+        animator.speed = 1 - playerInventoryScript.bagSize * 0.15f;
     }
 
     // Update is called once per frame
@@ -84,7 +92,7 @@ public class WeaponParent : MonoBehaviour
         {
             animator.SetTrigger("Attack");
             isAttacking = true;
-            delay = baseDelay;
+            delay = attackDelay;
         }
     }
 

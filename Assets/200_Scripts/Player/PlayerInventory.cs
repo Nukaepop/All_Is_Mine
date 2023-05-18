@@ -19,7 +19,6 @@ public class PlayerInventory : MonoBehaviour
 
     public int bagSize;
     public Transform BagTransform;
-    public Transform WeaponTransform;
 
     public bool canPickup = true;
 
@@ -59,10 +58,8 @@ public class PlayerInventory : MonoBehaviour
 }
     private void LateUpdate()
     {
-        BagTransform.localScale = new Vector3(0.7f + bagSize * 0.4f, 0.7f + bagSize * 0.4f, 0.7f + bagSize * 0.4f);
-        WeaponTransform.localScale = new Vector3(0.7f + bagSize * 0.4f, 0.7f + bagSize * 0.4f, 0.7f + bagSize * 0.4f);
+        BagTransform.localScale = new Vector3(0.7f + bagSize * 0.2f, 0.7f + bagSize * 0.2f, 0.7f + bagSize * 0.2f);
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Collectible"))
