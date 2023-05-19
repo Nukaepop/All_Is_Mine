@@ -6,6 +6,10 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     public Transform player; // Référence au transform du joueur
+    public Transform enemyWeapon; // Transform de l'arme de l'enemi
+
+    private Vector2 weaponDirection;
+
 
     public float detectionRange = 10f; // Portée de détection du joueur
     private float distanceToPlayer;
@@ -43,7 +47,18 @@ public class EnemyAI : MonoBehaviour
         {
             StopPatrol();
             MoveTowardsPlayer();
-            if(!isAttacking && hasCooldown && distanceToPlayer <= attackRange)
+
+            if (!isAttacking)
+            {
+                //arme qui suis le joueur
+                Vector3 difference = player.position - enemyWeapon.position;
+                difference.Normalize();
+                float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+                enemyWeapon.rotation = Quaternion.Euler(0f, 0f, rotation_z);
+
+            }
+
+            if (!isAttacking && hasCooldown && distanceToPlayer <= attackRange)
             {
                 Attack();
             }
@@ -53,11 +68,19 @@ public class EnemyAI : MonoBehaviour
         {
             // Continuer la ronde
             ContinuePatrol();
+
+            weaponDirection = GetWeaponDirection();
+
+            Vector3 difference = weaponDirection;
+            difference.Normalize();
+            float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            enemyWeapon.rotation = Quaternion.Euler(0f, 0f, rotation_z);
         }
         else
         {
             StartPatrol();
         }
+
     }
 
     private bool DetectPlayer()
@@ -113,6 +136,8 @@ public class EnemyAI : MonoBehaviour
 
             // Définir la destination du prochain waypoint
             navMeshAgent.SetDestination(waypoints[currentWaypointIndex].position);
+
+
         }
     }
 
@@ -134,6 +159,15 @@ public class EnemyAI : MonoBehaviour
         yield return new WaitForSeconds(attackCooldown);
         hasCooldown = true;
         isAttacking = false;
+    }
+
+    private Vector2 GetWeaponDirection()
+    {
+        // obtenir la direction vers le prochain waypoint
+        Vector3 nextWaypointDirection = waypoints[currentWaypointIndex].position - transform.position;
+        weaponDirection = nextWaypointDirection.normalized;
+
+        return new Vector2(weaponDirection.x, weaponDirection.y);
     }
 
 }
