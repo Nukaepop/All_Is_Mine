@@ -8,12 +8,21 @@ public class EnemyAI : MonoBehaviour
     public Transform player; // Référence au transform du joueur
 
     public float detectionRange = 10f; // Portée de détection du joueur
+    private float distanceToPlayer;
+
+    public float attackRange;
+    public float attackCooldown;
 
     private bool isPatrolling;
     public float patrolSpeed = 2f;
 
     public List<Transform> waypoints; // Liste des waypoints pour la ronde
     private int currentWaypointIndex = 0;
+
+    private bool isAttacking = false;
+    private bool hasCooldown = true;
+
+    public Animator animator;
 
     private NavMeshAgent navMeshAgent;
 
@@ -34,9 +43,10 @@ public class EnemyAI : MonoBehaviour
         {
             StopPatrol();
             MoveTowardsPlayer();
-
-            // Le joueur est détecté, ajoutez ici votre logique de comportement
-            // lorsque le joueur est repéré, par exemple, attaquer ou suivre le joueur
+            if(!isAttacking && hasCooldown && distanceToPlayer <= attackRange)
+            {
+                Attack();
+            }
         }
 
         else if (isPatrolling)
@@ -53,7 +63,7 @@ public class EnemyAI : MonoBehaviour
     private bool DetectPlayer()
     {
         // Vérifier la distance entre l'ennemi et le joueur
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
         // Vérifier si le joueur est à portée de détection
         if (distanceToPlayer <= detectionRange)
@@ -69,10 +79,13 @@ public class EnemyAI : MonoBehaviour
 
     private void MoveTowardsPlayer()
     {
-        navMeshAgent.SetDestination(player.position); // Définir la destination du joueur pour le NavMeshAgent
-        Debug.Log("IA en mouvement");
-    }
+        if (!isAttacking)
+        {
+            navMeshAgent.SetDestination(player.position); // Définir la destination du joueur pour le NavMeshAgent
+            Debug.Log("IA en mouvement");
 
+        }
+    }
     private void StartPatrol()
     {
         isPatrolling = true;
@@ -101,6 +114,26 @@ public class EnemyAI : MonoBehaviour
             // Définir la destination du prochain waypoint
             navMeshAgent.SetDestination(waypoints[currentWaypointIndex].position);
         }
+    }
+
+
+    private void Attack()
+    {
+        animator.SetTrigger("Attack");
+        isAttacking = true;
+        // Ajoutez ici votre logique d'attaque
+        // Par exemple, déclencher une animation d'attaque, infliger des dégâts au joueur, etc.
+        Debug.Log("IA attaque");
+
+        StartCoroutine(AttackCooldown());
+    }
+
+    private IEnumerator AttackCooldown()
+    {
+        hasCooldown = false;
+        yield return new WaitForSeconds(attackCooldown);
+        hasCooldown = true;
+        isAttacking = false;
     }
 
 }
