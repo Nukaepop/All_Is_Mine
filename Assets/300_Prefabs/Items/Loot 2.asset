@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81eb51b5edeee6344a5c489ae74637b8, type: 3}
+  m_Name: Loot 2
+  m_EditorClassIdentifier: 
+  id: 5
+  itemName: Loot 2
+  value: 12
+  Object: {fileID: 8406988599126565235, guid: 7d9967266fd49334eaa35716dc1d5ffc, type: 3}
+  weight: 3

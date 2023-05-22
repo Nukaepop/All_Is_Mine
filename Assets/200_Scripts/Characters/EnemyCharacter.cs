@@ -7,6 +7,8 @@ public class EnemyCharacter : Character
 
     public WeaponParent playerWeaponScript;
 
+   // public List<LootItem> lootItems;
+
     public override void TakeDamage(float damage)
     {
         // Logique spécifique pour les personnages ennemis lorsqu'ils subissent des dégâts
@@ -33,5 +35,19 @@ public class EnemyCharacter : Character
            Debug.Log("Enemy Hit");
          }
     }
+
+  /*  private void DropLoot()
+    {
+        foreach (LootItem lootItem in lootItems)
+        {
+            if (Random.value <= lootItem.dropRate)
+            {
+                Vector2 randomOffset = Random.insideUnitCircle * 1.5f;
+                Vector3 spawnPosition = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0f);
+                Instantiate(lootItem.prefab, spawnPosition, Quaternion.identity);
+            }
+        }
+    } */
+
 
 }

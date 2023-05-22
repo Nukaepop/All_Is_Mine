@@ -49,7 +49,7 @@ public class PlayerInventory : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.F)) && (Inventory.Count !=0))
         {
-            ThrowObjects();
+            LoseItems();
         }
 
 
@@ -108,7 +108,7 @@ public class PlayerInventory : MonoBehaviour
 
 
 
-    void ThrowObjects()
+    public void LoseItems()
     {
 
         // Prendre un item aléatoire dans le sac
@@ -116,8 +116,40 @@ public class PlayerInventory : MonoBehaviour
         Inventory.Remove(ItemALancer);
         projectile = ItemALancer.Object;
 
-        var projectilePosition = new Vector2(Random.Range(-5, 5), Random.Range(-5, 5));
-        Instantiate(projectile, projectilePosition, Quaternion.identity);
+        float raycastDistance = 2f; // Distance maximale pour le raycast
+        int maxAttempts = 10; // Nombre maximum de tentatives pour trouver une position sans collision
+        int attemptCount = 0; // Compteur de tentatives
+
+        // Variables pour la nouvelle position aléatoire
+        Vector2 newPosition = Vector2.zero;
+        bool foundValidPosition = false;
+
+        while (!foundValidPosition && attemptCount < maxAttempts)
+        {
+            // Générer une nouvelle position aléatoire autour du joueur
+            newPosition = new Vector2(transform.position.x + Random.Range(-2f, 2f), transform.position.y + Random.Range(-2f, 2f));
+
+            // Effectuer un raycast pour vérifier s'il y a une collision avec un mur ou un obstacle
+            RaycastHit2D hit = Physics2D.Raycast(newPosition, Vector2.zero, raycastDistance);
+
+            // Si le raycast ne détecte pas de collision, nous avons trouvé une position valide
+            if (hit.collider == null)
+            {
+                foundValidPosition = true;
+            }
+
+            attemptCount++;
+        }
+
+        // Si une position valide a été trouvée, instancier l'objet à cette position
+        if (foundValidPosition)
+        {
+            Instantiate(projectile, newPosition, Quaternion.identity);
+        }
+        else
+        {
+            Debug.Log("Impossible de trouver une position sans collision pour l'instanciation de l'objet.");
+        }
 
         TotalWeight = CalculateTotalWeight();
         bagSize = CalculateBagSize();
