@@ -15,5 +15,6 @@ MonoBehaviour:
   id: 2
   itemName: Truc
   value: 10
-  Object: {fileID: 8406988599126565235, guid: 7d9967266fd49334eaa35716dc1d5ffc, type: 3}
+  Object: {fileID: 8406988599126565235, guid: 8269a33c3883b20459e34232cdfdfa01, type: 3}
   weight: 8
+  dropRate: 0

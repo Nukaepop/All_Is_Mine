@@ -15,5 +15,6 @@ MonoBehaviour:
   id: 1
   itemName: Bidule
   value: 10
-  Object: {fileID: 7992054442429218181, guid: c8835d3b02571794e8b39c945dd34c92, type: 3}
+  Object: {fileID: 7992054442429218181, guid: 4496435bf82a04b41bc0f2ed8bf78ed3, type: 3}
   weight: 4
+  dropRate: 0
