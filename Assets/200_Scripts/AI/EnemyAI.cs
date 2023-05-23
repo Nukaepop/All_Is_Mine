@@ -25,6 +25,7 @@ public class EnemyAI : MonoBehaviour
 
     private bool isAttacking = false;
     private bool hasCooldown = true;
+    private bool isMovingToPlayer = false;
 
     public Animator animator;
 
@@ -76,6 +77,10 @@ public class EnemyAI : MonoBehaviour
             float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             enemyWeapon.rotation = Quaternion.Euler(0f, 0f, rotation_z);
         }
+        else if (isMovingToPlayer)
+        {
+            MoveTowardsPlayer();
+        }
         else
         {
             StartPatrol();
@@ -107,6 +112,11 @@ public class EnemyAI : MonoBehaviour
             navMeshAgent.SetDestination(player.position); // Définir la destination du joueur pour le NavMeshAgent
             Debug.Log("IA en mouvement");
 
+            // Vérifier si l'ennemi a atteint sa destination
+            if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+            {
+                isMovingToPlayer = false;
+            }
         }
     }
     private void StartPatrol()
@@ -142,6 +152,7 @@ public class EnemyAI : MonoBehaviour
     }
 
 
+
     private void Attack()
     {
         animator.SetTrigger("Attack");
@@ -151,6 +162,7 @@ public class EnemyAI : MonoBehaviour
         Debug.Log("IA attaque");
 
         StartCoroutine(AttackCooldown());
+        isMovingToPlayer = true;
     }
 
     private IEnumerator AttackCooldown()
