@@ -21,6 +21,7 @@ public class PlayerInventory : MonoBehaviour
     public Transform BagTransform;
 
     public bool canPickup = true;
+    private bool isCollecting = false;
 
     #region GestionDesItemsDansLeSac
 
@@ -61,8 +62,11 @@ public class PlayerInventory : MonoBehaviour
         {
             objetsEnCollision.Add(collision.gameObject);
 
-            // Mettre à jour l'objet le plus proche
-            UpdateNearestObject();
+            // Si aucun objet n'est en cours de collecte, mettez à jour l'objet le plus proche
+            if (!isCollecting)
+            {
+                UpdateNearestObject();
+            }
         }
     }
 
@@ -72,24 +76,35 @@ public class PlayerInventory : MonoBehaviour
         {
             objetsEnCollision.Remove(collision.gameObject);
 
-            // Mettre à jour l'objet le plus proche
-            UpdateNearestObject();
+            // Si aucun objet n'est en cours de collecte, mettez à jour l'objet le plus proche
+            if (!isCollecting)
+            {
+                UpdateNearestObject();
+            }
         }
     }
 
-void CollectObjects()
-{
-    if (nearestObject != null)
+    void CollectObjects()
     {
-        Item item = nearestObject.GetComponent<ItemController>().Item;
-        Inventory.Add(item);
-        TotalWeight = CalculateTotalWeight();
-        bagSize = CalculateBagSize();
-        Destroy(nearestObject);
-        objetsEnCollision.Remove(nearestObject);
-        UpdateNearestObject();
+        if (nearestObject != null)
+        {
+            // Définir la variable isCollecting à true pour indiquer qu'un objet est en cours de collecte
+            isCollecting = true;
+
+            Item item = nearestObject.GetComponent<ItemController>().Item;
+            Inventory.Add(item);
+            TotalWeight = CalculateTotalWeight();
+            bagSize = CalculateBagSize();
+            Destroy(nearestObject);
+            objetsEnCollision.Remove(nearestObject);
+
+            // Mettre à jour l'objet le plus proche
+            UpdateNearestObject();
+
+            // Rétablir la variable isCollecting à false après la collecte
+            isCollecting = false;
+        }
     }
-}
 
     private void UpdateNearestObject()
     {
