@@ -136,11 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8406988599126565133, guid: 7d9967266fd49334eaa35716dc1d5ffc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1285907
+      value: -2.08
       objectReference: {fileID: 0}
     - target: {fileID: 8406988599126565133, guid: 7d9967266fd49334eaa35716dc1d5ffc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.81434417
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 8406988599126565133, guid: 7d9967266fd49334eaa35716dc1d5ffc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -197,11 +197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7992054442429218299, guid: c8835d3b02571794e8b39c945dd34c92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5962048
+      value: -2.61
       objectReference: {fileID: 0}
     - target: {fileID: 7992054442429218299, guid: c8835d3b02571794e8b39c945dd34c92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.1204991
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 7992054442429218299, guid: c8835d3b02571794e8b39c945dd34c92, type: 3}
       propertyPath: m_LocalPosition.z
@@ -949,11 +949,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7992054442429218299, guid: 487b259df76b87847905b0c20281e81c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.67957
+      value: -2.61
       objectReference: {fileID: 0}
     - target: {fileID: 7992054442429218299, guid: 487b259df76b87847905b0c20281e81c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8977095
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7992054442429218299, guid: 487b259df76b87847905b0c20281e81c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1261,6 +1261,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 875167361}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: patrolSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 908700449}
@@ -1278,11 +1282,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872642, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.96
+      value: -8.04
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872642, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.08
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872642, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1320,6 +1324,22 @@ PrefabInstance:
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 405632506}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: lootItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: lootItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 49ceee09270fd4d4485b9fca1939a724, type: 2}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: lootItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a9aaedd63b9bd942ac9b110b3acc904, type: 2}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: lootItems.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9cf38c8810df6aa4e8901f303b07adae, type: 2}
     - target: {fileID: 8956344907588872646, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: m_Name
       value: Enemy

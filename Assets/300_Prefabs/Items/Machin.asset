@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81eb51b5edeee6344a5c489ae74637b8, type: 3}
   m_Name: Machin
   m_EditorClassIdentifier: 
-  id: 1
+  id: 0
   itemName: Machin
   value: 10
   Object: {fileID: 7992054442429218181, guid: 487b259df76b87847905b0c20281e81c, type: 3}

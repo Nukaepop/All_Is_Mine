@@ -7,7 +7,7 @@ public class EnemyCharacter : Character
 
     public WeaponParent playerWeaponScript;
 
-   // public List<LootItem> lootItems;
+   public List<Item> lootItems;
 
     public override void TakeDamage(float damage)
     {
@@ -16,6 +16,7 @@ public class EnemyCharacter : Character
         // Autres actions spécifiques aux ennemis
         if(health <=0)
         {
+            DropLoot(); // methode pour le butin
             Destroy(gameObject);
             Debug.Log("Enemy Died"); 
         }
@@ -36,18 +37,18 @@ public class EnemyCharacter : Character
          }
     }
 
-  /*  private void DropLoot()
+    private void DropLoot()
     {
-        foreach (LootItem lootItem in lootItems)
+        foreach (Item lootItem in lootItems)
         {
-            if (Random.value <= lootItem.dropRate)
+            if (Random.value >= lootItem.dropRate)
             {
                 Vector2 randomOffset = Random.insideUnitCircle * 1.5f;
                 Vector3 spawnPosition = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0f);
-                Instantiate(lootItem.prefab, spawnPosition, Quaternion.identity);
+                Instantiate(lootItem.Object, spawnPosition, Quaternion.identity);
             }
         }
-    } */
+    }
 
 
 }

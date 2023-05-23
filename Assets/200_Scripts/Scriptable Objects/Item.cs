@@ -12,5 +12,5 @@ public class Item : ScriptableObject
     public int value;
     public GameObject Object;
     public float weight;
-
+    public float dropRate;
 }

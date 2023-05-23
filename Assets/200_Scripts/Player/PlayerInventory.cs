@@ -11,7 +11,7 @@ public class PlayerInventory : MonoBehaviour
     private Item CurrentItemRef;
  
     List<GameObject> objetsEnCollision;
-
+    private GameObject nearestObject;
 
     public GameObject projectile;
 
@@ -36,26 +36,21 @@ public class PlayerInventory : MonoBehaviour
 
     private void Update()
     {
-        //Ramasser quand on appuie sur E et qu'on est dans la zone de trigger
+        // Mettre à jour l'objet le plus proche
+        UpdateNearestObject();
 
+        // Ramasser quand on appuie sur E et qu'on est dans la zone de trigger
         if (Input.GetKeyDown(KeyCode.E) && canPickup)
         {
-
             CollectObjects();
-
         }
 
-        // Faire apparaitre un objet présent dans le sac
-
-        if ((Input.GetKeyDown(KeyCode.F)) && (Inventory.Count !=0))
+        // Faire apparaître un objet présent dans le sac
+        if (Input.GetKeyDown(KeyCode.F) && Inventory.Count != 0)
         {
             LoseItems();
         }
-
-
-
-
-}
+    }
     private void LateUpdate()
     {
         BagTransform.localScale = new Vector3(0.7f + bagSize * 0.2f, 0.7f + bagSize * 0.2f, 0.7f + bagSize * 0.2f);
@@ -64,14 +59,10 @@ public class PlayerInventory : MonoBehaviour
     {
         if (collision.CompareTag("Collectible"))
         {
-
             objetsEnCollision.Add(collision.gameObject);
 
-
-
-            //Obtenir les refs de l'objet sur lequel on est actuellement
-            
-            CurrentItemRef = collision.gameObject.GetComponent<ItemController>().Item;
+            // Mettre à jour l'objet le plus proche
+            UpdateNearestObject();
         }
     }
 
@@ -79,33 +70,42 @@ public class PlayerInventory : MonoBehaviour
     {
         if (collision.CompareTag("Collectible"))
         {
-
-            //Empecher le pickup quand on est sur aucun collectible
-
-
             objetsEnCollision.Remove(collision.gameObject);
 
+            // Mettre à jour l'objet le plus proche
+            UpdateNearestObject();
         }
     }
 
-    void CollectObjects()
+void CollectObjects()
+{
+    if (nearestObject != null)
     {
-        if (objetsEnCollision.Count > 0)
-        {
-            List<GameObject> objetsCopie = new List<GameObject>(objetsEnCollision);
+        Item item = nearestObject.GetComponent<ItemController>().Item;
+        Inventory.Add(item);
+        TotalWeight = CalculateTotalWeight();
+        bagSize = CalculateBagSize();
+        Destroy(nearestObject);
+        objetsEnCollision.Remove(nearestObject);
+        UpdateNearestObject();
+    }
+}
 
-            foreach (GameObject obj in objetsCopie)
+    private void UpdateNearestObject()
+    {
+        float nearestDistance = Mathf.Infinity;
+        nearestObject = null;
+
+        foreach (GameObject obj in objetsEnCollision)
+        {
+            float distance = Vector2.Distance(transform.position, obj.transform.position);
+            if (distance < nearestDistance)
             {
-                Item item = obj.GetComponent<ItemController>().Item;
-                Inventory.Add(item);
-                TotalWeight = CalculateTotalWeight();
-                bagSize = CalculateBagSize();
-                Destroy(obj);
-                objetsEnCollision.Remove(obj);
+                nearestDistance = distance;
+                nearestObject = obj;
             }
         }
     }
-
 
 
     public void LoseItems()
@@ -209,6 +209,7 @@ public class PlayerInventory : MonoBehaviour
         bagSize = _bagSize;
         return bagSize;
     }
+
 
 
     #endregion
