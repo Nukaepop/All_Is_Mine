@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8623818063861088900}
   - component: {fileID: 8623818063861088907}
+  - component: {fileID: 1661483530}
+  - component: {fileID: 1661483529}
   m_Layer: 9
   m_Name: Weapon
   m_TagString: Untagged
@@ -85,6 +87,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1661483530
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8623818063861088901}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000009536743, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.49999997
+--- !u!114 &1661483529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8623818063861088901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0d448063828084b89d759ef8aa79da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDamage: 3
+  playerInventoryScript: {fileID: 0}
+  playerMovementScript: {fileID: 0}
 --- !u!1 &8623818064191515084
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +546,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   playerWeaponScript: {fileID: 0}
+  lootItems:
+  - {fileID: 11400000, guid: 49ceee09270fd4d4485b9fca1939a724, type: 2}
+  - {fileID: 11400000, guid: 7a9aaedd63b9bd942ac9b110b3acc904, type: 2}
+  - {fileID: 11400000, guid: 9cf38c8810df6aa4e8901f303b07adae, type: 2}
 --- !u!114 &8623818064834976706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,7 +566,7 @@ MonoBehaviour:
   enemyWeapon: {fileID: 8623818064191515091}
   detectionRange: 5
   attackRange: 2
-  attackCooldown: 2
+  attackCooldown: 1
   patrolSpeed: 3
   waypoints:
   - {fileID: 0}

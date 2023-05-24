@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 617710172}
   - component: {fileID: 617710171}
   - component: {fileID: 617710173}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: Weapon
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -550,5 +550,5 @@ MonoBehaviour:
   projectile: {fileID: 0}
   TotalWeight: 0
   bagSize: 0
-  BagTransform: {fileID: 143273310}
+  BagTransform: {fileID: 617710172}
   canPickup: 1
