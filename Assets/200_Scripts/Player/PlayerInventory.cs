@@ -54,7 +54,7 @@ public class PlayerInventory : MonoBehaviour
     }
     private void LateUpdate()
     {
-        BagTransform.localScale = new Vector3(0.7f + bagSize * 0.2f, 0.7f + bagSize * 0.2f, 0.7f + bagSize * 0.2f);
+        BagTransform.localScale = new Vector3(1f + bagSize * 0.2f, 1f + bagSize * 0.2f, 1f + bagSize * 0.2f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
