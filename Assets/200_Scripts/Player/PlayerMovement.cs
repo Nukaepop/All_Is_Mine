@@ -16,10 +16,10 @@ public class PlayerMovement : MonoBehaviour
     private KeyCode rollKey = KeyCode.Space;
 
 
-    [Header("ScriptRefs")]
+    [Header("Refs")]
 
     public PlayerInventory InventoryScript;
-
+    public Animator animator;
 
     [Header("Walk")]
 
@@ -112,6 +112,14 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.color = baseColor;
 
             isUsingStamina = false;
+            if (rb.velocity == Vector2.zero)
+            {
+                animator.SetBool("isWalking", false);
+            }
+            else
+            {
+                animator.SetBool("isWalking", true);
+            }
         }
     }
 
@@ -182,8 +190,16 @@ public class PlayerMovement : MonoBehaviour
             dashDirection = GetDashDirection();
             StartCoroutine(PerformRoll());
         }
-
-
+        if (moveX < 0) // Mouvement vers la gauche
+        {
+            // Inverser l'échelle en mettant la valeur de l'axe X à -1
+            spriteRenderer.flipX = true;
+        }
+        else if (moveX > 0) // Mouvement vers la droite
+        {
+            // Remettre l'échelle à sa valeur normale en mettant la valeur de l'axe X à 1
+            spriteRenderer.flipX = false;
+        }
 
     }
 
