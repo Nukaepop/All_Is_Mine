@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3e67648488d5a843833d6ded74fda94
-      internalID: 933281700
+      spriteID: ba7c84e115c08464fb3f35e46ebd52eb
+      internalID: -1271237789
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f77c9cbae3443a46a32fa0ec902e232
-      internalID: 510742712
+      spriteID: b7bccf9b214444444a5a76cc93ae8f7f
+      internalID: -1286837840
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdcc4ab24a77e1e4999aa6ab7cfcc5f2
-      internalID: -1996411910
+      spriteID: 3c47f08a445ef5e4886ad5539f7b9857
+      internalID: 879479802
       vertices: []
       indices: 
       edges: []
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71b9a7dbe29a84b4abff906a871564fc
-      internalID: 113331783
+      spriteID: 262fb77dac2f99a468436e7a43e3c454
+      internalID: 2078756938
       vertices: []
       indices: 
       edges: []
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36d09511f4140c543b2aa24d9a31d141
-      internalID: 123105526
+      spriteID: 6392df267500b9b4580f2b6250d38561
+      internalID: 1665053333
       vertices: []
       indices: 
       edges: []
@@ -220,11 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Gobaglin_Attack_0: 933281700
-      Gobaglin_Attack_1: 510742712
-      Gobaglin_Attack_2: -1996411910
-      Gobaglin_Attack_3: 113331783
-      Gobaglin_Attack_4: 123105526
+      Gobaglin_Attack_0: -1271237789
+      Gobaglin_Attack_1: -1286837840
+      Gobaglin_Attack_2: 879479802
+      Gobaglin_Attack_3: 2078756938
+      Gobaglin_Attack_4: 1665053333
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
