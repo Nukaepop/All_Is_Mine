@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("General")]
 
     public Rigidbody2D rb;
+    public Transform characterTransform;
 
     public SpriteRenderer spriteRenderer;
     public Color baseColor;
@@ -54,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 moveDirection;
 
+    public bool isFacingRight;
 
     [Header("Stamina")]
 
@@ -62,9 +64,9 @@ public class PlayerMovement : MonoBehaviour
     public float staminaRecoveryRate;
     public float baseMaxStamina;
 
-
     private bool hasStamina = true;
     private bool isUsingStamina = false;
+
 
     [Header("Invincibility")]
 
@@ -190,16 +192,7 @@ public class PlayerMovement : MonoBehaviour
             dashDirection = GetDashDirection();
             StartCoroutine(PerformRoll());
         }
-        if (moveX < 0) // Mouvement vers la gauche
-        {
-            // Inverser l'échelle en mettant la valeur de l'axe X à -1
-            spriteRenderer.flipX = true;
-        }
-        else if (moveX > 0) // Mouvement vers la droite
-        {
-            // Remettre l'échelle à sa valeur normale en mettant la valeur de l'axe X à 1
-            spriteRenderer.flipX = false;
-        }
+
 
     }
 

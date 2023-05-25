@@ -8,14 +8,18 @@ public class WeaponParent : MonoBehaviour
     public SpriteRenderer characterRenderer, weaponRenderer;
 
     public Animator animator;
+    public Animator traineeAnimator;
     private float delay;
     public float baseDelay;
     public float attackDelay;
 
     public Transform TransformWeaponParent;
+    public Transform playerTransform;
     public PlayerInventory playerInventoryScript;
 
     public float AttackDamage;
+
+    public bool isFacingRight;
 
 
     public bool isAttacking { get; private set; }
@@ -42,23 +46,44 @@ public class WeaponParent : MonoBehaviour
     {
         if (!isAttacking)
         {
+
+            Vector3 mousePosition = Input.mousePosition;
+
+            // Récupère la position du personnage par rapport à la caméra
+            Vector3 characterPosition = Camera.main.WorldToScreenPoint(playerTransform.position);
+
+            // Compare les positions X pour déterminer la direction de la souris par rapport au personnage
+            if (mousePosition.x > characterPosition.x)
+            {
+                if (!isFacingRight)
+                    // La souris est à droite du personnage
+                    playerTransform.localScale = new Vector3(1, 1, 1); // Ne pas retourner le sprite
+                isFacingRight = true;
+            }
+            else
+            {
+                if (isFacingRight)
+                    // La souris est à gauche du personnage
+                    playerTransform.localScale = new Vector3(-1, 1, 1); // Retourner le sprite horizontalement
+                isFacingRight = false;
+            }
+
+
             //arme qui suis la souris
             Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - TransformWeaponParent.position;
             difference.Normalize();
             float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+
+            if (!isFacingRight)
+            {
+                rotation_z += 180f;
+            }
+
             TransformWeaponParent.rotation = Quaternion.Euler(0f, 0f, rotation_z);
         }
         //rotate le sprite de l'arme en fonction du coté de notre curseur sur l'axe x
 
-        Vector2 scale = TransformWeaponParent.localScale;
-        if (Input.mousePosition.x < 0)
-        {
-            scale.y = -1;
-        }
-        else if (Input.mousePosition.x > 0)
-        {
-            scale.y = 1;
-        }
+
 
         //faire passer l'arme devant ou derrière le joueur en fonction de la rotation de l'arme  -- en haut = derrière le joueur | en bas = devant
 
@@ -71,8 +96,7 @@ public class WeaponParent : MonoBehaviour
             weaponRenderer.sortingOrder = characterRenderer.sortingOrder + 1;
         }
 
-
-        TransformWeaponParent.localScale = scale;
+ 
 
         if (Input.GetMouseButton(0))
         {
@@ -91,6 +115,7 @@ public class WeaponParent : MonoBehaviour
         if (delay <= 0)
         {
             animator.SetTrigger("Attack");
+            traineeAnimator.SetTrigger("Attack");
             isAttacking = true;
             delay = attackDelay;
         }
