@@ -8,7 +8,6 @@ public class WeaponParent : MonoBehaviour
     public SpriteRenderer characterRenderer, weaponRenderer;
 
     public Animator animator;
-    public Animator traineeAnimator;
     private float delay;
     public float baseDelay;
     public float attackDelay;
@@ -115,7 +114,6 @@ public class WeaponParent : MonoBehaviour
         if (delay <= 0)
         {
             animator.SetTrigger("Attack");
-            traineeAnimator.SetTrigger("Attack");
             isAttacking = true;
             delay = attackDelay;
         }

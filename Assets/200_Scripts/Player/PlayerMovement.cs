@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     public float baseMaxStamina;
 
     private bool hasStamina = true;
-    private bool isUsingStamina = false;
+    public bool isUsingStamina = false;
 
 
     [Header("Invincibility")]
