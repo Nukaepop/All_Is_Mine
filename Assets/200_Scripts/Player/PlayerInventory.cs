@@ -11,7 +11,9 @@ public class PlayerInventory : MonoBehaviour
     private Item CurrentItemRef;
  
     List<GameObject> objetsEnCollision;
-    private GameObject nearestObject;
+    public GameObject nearestObject;
+
+
 
     public GameObject projectile;
 
@@ -33,6 +35,8 @@ public class PlayerInventory : MonoBehaviour
         objetsEnCollision = new List<GameObject>();
 
         canPickup = true;
+
+
     }
 
     private void Update()
@@ -120,6 +124,7 @@ public class PlayerInventory : MonoBehaviour
                 nearestObject = obj;
             }
         }
+
     }
 
 
