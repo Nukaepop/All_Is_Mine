@@ -11,6 +11,7 @@ public class EnemyCharacter : Character
    public List<Item> lootItems;
 
 
+
     public override void TakeDamage(float damage)
     {
         // Logique spécifique pour les personnages ennemis lorsqu'ils subissent des dégâts
@@ -20,7 +21,7 @@ public class EnemyCharacter : Character
         {
             DropLoot(); // methode pour le butin
             Destroy(gameObject);
-            Debug.Log("Enemy Died"); 
+            Debug.Log("Enemy Died");
         }
     }
 

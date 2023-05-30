@@ -338,6 +338,11 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!4 &348626733 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8956344907588872642, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+  m_PrefabInstance: {fileID: 8623818065521522819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &405632506 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1080354305, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
@@ -1286,6 +1291,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 875167361}
+    - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: transform
+      value: 
+      objectReference: {fileID: 348626733}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
