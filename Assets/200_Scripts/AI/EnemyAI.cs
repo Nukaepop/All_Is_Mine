@@ -120,10 +120,6 @@ public class EnemyAI : MonoBehaviour
                 isMovingToPlayer = false;
             }
 
-            if(transform.position.x < player.position.x)
-            {
-
-            }
         }
     }
     private void StartPatrol()
