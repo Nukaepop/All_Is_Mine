@@ -288,8 +288,10 @@ MonoBehaviour:
   baseDelay: 0.6
   attackDelay: 0
   TransformWeaponParent: {fileID: 1080354304}
+  playerTransform: {fileID: 917037197784156785}
   playerInventoryScript: {fileID: 6754937888544410552}
   AttackDamage: 10
+  isFacingRight: 0
 --- !u!1 &2048529407
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +364,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 12
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.5, g: 0.31569213, b: 0.054245293, a: 1}
   m_FlipX: 0
@@ -385,9 +387,10 @@ GameObject:
   - component: {fileID: 917037197784156785}
   - component: {fileID: 917037197784156786}
   - component: {fileID: 917037197784156787}
-  - component: {fileID: 917037197784156748}
   - component: {fileID: 917037197784156749}
   - component: {fileID: 6754937888544410552}
+  - component: {fileID: 917037198844540316}
+  - component: {fileID: 917037198844540309}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -452,8 +455,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.074509785, g: 0.5931709, b: 0.62352943, a: 1}
+  m_Sprite: {fileID: 865233806, guid: 4e5e67b3d6f70014ea3a44413b5b2d66, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -484,22 +487,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &917037197784156748
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917037197784156751}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &917037197784156749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,6 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryScript: {fileID: 6754937888544410552}
+  animator: {fileID: 917037198844540309}
   WalkSpeed: 5
   SprintSpeed: 9
   SprintStaminaCostRate: 20
@@ -521,15 +509,18 @@ MonoBehaviour:
   dashSpeed: 4
   RollStaminaCost: 20
   rb: {fileID: 917037197784156787}
+  characterTransform: {fileID: 917037197784156785}
   spriteRenderer: {fileID: 917037197784156786}
   baseColor: {r: 0, g: 0, b: 0, a: 0}
   currentColor: {r: 0, g: 0, b: 0, a: 0}
   weaponParentScript: {fileID: 1080354305}
   moveDirection: {x: 0, y: 0}
+  isFacingRight: 0
   MaxStamina: 100
   currentStamina: 100
   staminaRecoveryRate: 10
   baseMaxStamina: 100
+  isUsingStamina: 0
   isInvincible: 0
   invincibilityDuration: 0.5
   invincibilityTimer: 0
@@ -547,8 +538,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Inventory: []
+  nearestObject: {fileID: 0}
   projectile: {fileID: 0}
   TotalWeight: 0
   bagSize: 0
   BagTransform: {fileID: 617710172}
   canPickup: 1
+--- !u!70 &917037198844540316
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917037197784156751}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.020578623, y: -0.032925785}
+  m_Size: {x: 0.47718453, y: 0.79821086}
+  m_Direction: 0
+--- !u!95 &917037198844540309
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917037197784156751}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 900a4c8d0f1b11c4384c497a85f6f37a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
