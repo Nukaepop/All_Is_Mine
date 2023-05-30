@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9f44ba89ba1804a83b1ca615ac1542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propRef: Big Bookshelf
+  propRef: Box
 --- !u!114 &6179419279308731762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5397f37cc048f5e4f899cd80e5f16c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 11400000, guid: 3f29feec99dc0bb4b80e7d44c4c4b108, type: 2}
+  Item: {fileID: 11400000, guid: 17d14c0c4cb917649a86ee9a7d161fc3, type: 2}
 --- !u!1 &4934115882041530366
 GameObject:
   m_ObjectHideFlags: 0
