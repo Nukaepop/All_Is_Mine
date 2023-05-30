@@ -17,4 +17,4 @@ MonoBehaviour:
   value: 8
   Object: {fileID: 7992054442429218181, guid: a37fb42b6b1f02a4a8c81ff3293bf565, type: 3}
   weight: 3
-  dropRate: 0.8
+  dropRate: 0

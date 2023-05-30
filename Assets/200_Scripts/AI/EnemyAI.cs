@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
     public Transform player; // Référence au transform du joueur
     public Transform enemyWeapon; // Transform de l'arme de l'enemi
-
+    public Transform transform;
     private Vector2 weaponDirection;
 
 
@@ -109,6 +109,8 @@ public class EnemyAI : MonoBehaviour
     {
         if (!isAttacking)
         {
+            animator.SetBool("isWalking", true);
+
             navMeshAgent.SetDestination(player.position); // Définir la destination du joueur pour le NavMeshAgent
             Debug.Log("IA en mouvement");
 
@@ -117,13 +119,18 @@ public class EnemyAI : MonoBehaviour
             {
                 isMovingToPlayer = false;
             }
+
+            if(transform.position.x < player.position.x)
+            {
+
+            }
         }
     }
     private void StartPatrol()
     {
         isPatrolling = true;
         navMeshAgent.speed = patrolSpeed;
-
+        animator.SetBool("isWalking", true);
         // Définir la destination initiale du premier waypoint
         navMeshAgent.SetDestination(waypoints[currentWaypointIndex].position);
         Debug.Log("IA en ronde");
@@ -155,6 +162,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Attack()
     {
+        animator.SetBool("isWalking", false);
         animator.SetTrigger("Attack");
         isAttacking = true;
         // Ajoutez ici votre logique d'attaque

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemyCharacter : Character
 {
@@ -8,6 +9,8 @@ public class EnemyCharacter : Character
     public WeaponParent playerWeaponScript;
 
    public List<Item> lootItems;
+
+
 
     public override void TakeDamage(float damage)
     {
@@ -18,7 +21,7 @@ public class EnemyCharacter : Character
         {
             DropLoot(); // methode pour le butin
             Destroy(gameObject);
-            Debug.Log("Enemy Died"); 
+            Debug.Log("Enemy Died");
         }
     }
 
@@ -31,10 +34,10 @@ public class EnemyCharacter : Character
     {
         if (other.tag == "Weapon")
         {
-             float damage = playerWeaponScript.AttackDamage;
-           TakeDamage(damage);
-           Debug.Log("Enemy Hit");
-         }
+            float damage = playerWeaponScript.AttackDamage;
+            TakeDamage(damage);
+            Debug.Log("Enemy Hit");
+        }
     }
 
     private void DropLoot()

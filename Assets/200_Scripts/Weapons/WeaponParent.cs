@@ -43,6 +43,8 @@ public class WeaponParent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (!isAttacking)
         {
 
@@ -113,9 +115,32 @@ public class WeaponParent : MonoBehaviour
     {
         if (delay <= 0)
         {
+            if (playerInventoryScript.bagSize == 0)
+            {
+                AttackDamage = 1;
+            }
+            else if (playerInventoryScript.bagSize == 1)
+            {
+                AttackDamage = 3;
+            }
+            else if (playerInventoryScript.bagSize == 2)
+            {
+                AttackDamage = 5;
+            }
+            else if (playerInventoryScript.bagSize >= 3)
+            {
+                AttackDamage = 8;
+            }
+            else
+            {
+                // Valeur par défaut si bagSize ne correspond à aucun cas précis
+                AttackDamage = 1;
+            }
+            Debug.Log("Attack Damage: " + AttackDamage);
             animator.SetTrigger("Attack");
             isAttacking = true;
             delay = attackDelay;
+            Debug.Log(AttackDamage);
         }
     }
 
