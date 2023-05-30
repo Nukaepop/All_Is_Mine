@@ -548,8 +548,6 @@ MonoBehaviour:
   playerWeaponScript: {fileID: 0}
   lootItems:
   - {fileID: 11400000, guid: 49ceee09270fd4d4485b9fca1939a724, type: 2}
-  - {fileID: 11400000, guid: 7a9aaedd63b9bd942ac9b110b3acc904, type: 2}
-  - {fileID: 11400000, guid: 9cf38c8810df6aa4e8901f303b07adae, type: 2}
 --- !u!114 &8623818064834976706
 MonoBehaviour:
   m_ObjectHideFlags: 0

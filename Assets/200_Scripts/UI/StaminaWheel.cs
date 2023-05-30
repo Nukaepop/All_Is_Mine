@@ -11,9 +11,12 @@ public class StaminaWheel : MonoBehaviour
     public RectTransform sliderRectTransform;
     public CanvasGroup sliderCanvasGroup;
 
+    public Slider usageSlider;
+
     private void Start()
     {
         staminaSlider.maxValue = playerMovementScript.MaxStamina;
+        usageSlider.maxValue = playerMovementScript.MaxStamina;
     }
 
     private void Update()
@@ -26,6 +29,14 @@ public class StaminaWheel : MonoBehaviour
     private void UpdateStaminaBar()
     {
         staminaSlider.value = playerMovementScript.currentStamina;
+        if (playerMovementScript.isRolling)
+        {
+            usageSlider.value = playerMovementScript.currentStamina + playerMovementScript.RollStaminaCost;
+        }
+        else if (Input.GetKey(playerMovementScript.sprintKey))
+        {
+            usageSlider.value = playerMovementScript.currentStamina + (playerMovementScript.SprintStaminaCostRate/3);
+        }
     }
 
     private void FollowPlayer()

@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private KeyCode MoveRightKey = KeyCode.D;
     private KeyCode MoveDownKey = KeyCode.S;
 
-    private KeyCode sprintKey = KeyCode.LeftShift;
-    private KeyCode rollKey = KeyCode.Space;
+    public KeyCode sprintKey = KeyCode.LeftShift;
+    public KeyCode rollKey = KeyCode.Space;
 
 
     [Header("Refs")]
