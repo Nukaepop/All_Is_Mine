@@ -16,7 +16,7 @@ public class WeaponParent : MonoBehaviour
     public Transform playerTransform;
     public PlayerInventory playerInventoryScript;
 
-    public float AttackDamage;
+    public int AttackDamage;
 
     public bool isFacingRight;
 

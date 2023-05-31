@@ -12,13 +12,20 @@ public class EnemyCharacter : Character
 
     public Animator animator;
 
+    public GameObject damageText;
 
-    public override void TakeDamage(float damage)
+
+    public override void TakeDamage(int damage)
     {
         // Logique spécifique pour les personnages ennemis lorsqu'ils subissent des dégâts
         base.TakeDamage(damage); // Appel à la méthode de la classe de base pour gérer les points de vie
         // Autres actions spécifiques aux ennemis
         animator.SetTrigger("DamageReceived");
+
+        DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+        indicator.SetDamageText(damage);
+
+
         if (health <=0)
         {
             DropLoot(); // methode pour le butin
@@ -28,7 +35,7 @@ public class EnemyCharacter : Character
         }
     }
 
-    public override void Heal(float amount)
+    public override void Heal(int amount)
     {
         // Les personnages ennemis ne peuvent généralement pas être soignés, cette méthode peut être laissée vide
     }
@@ -37,8 +44,14 @@ public class EnemyCharacter : Character
     {
         if (other.tag == "Weapon")
         {
-            float damage = playerWeaponScript.AttackDamage;
+            int damage = playerWeaponScript.AttackDamage;
             TakeDamage(damage);
+
+            if (damageIndicator != null)
+            {
+                damageIndicator.SetDamageText(damage);
+            }
+
             Debug.Log("Enemy Hit");
         }
     }

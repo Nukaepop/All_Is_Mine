@@ -6,7 +6,7 @@ public class Character : MonoBehaviour
 {
     public float health;
 
-    public virtual void TakeDamage(float damage)
+    public virtual void TakeDamage(int damage)
     {
         // Logique pour réduire les points de vie du personnage
 
@@ -17,7 +17,7 @@ public class Character : MonoBehaviour
 
     }
 
-    public virtual void Heal(float amount)
+    public virtual void Heal(int amount)
     {
         // Logique pour soigner le personnage
         health += amount;
