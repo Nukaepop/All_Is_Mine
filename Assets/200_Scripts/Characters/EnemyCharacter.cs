@@ -12,7 +12,7 @@ public class EnemyCharacter : Character
 
     public Animator animator;
 
-    public GameObject damageText;
+    public GameObject floatingTextPrefab;
 
 
     public override void TakeDamage(int damage)
@@ -21,10 +21,7 @@ public class EnemyCharacter : Character
         base.TakeDamage(damage); // Appel à la méthode de la classe de base pour gérer les points de vie
         // Autres actions spécifiques aux ennemis
         animator.SetTrigger("DamageReceived");
-
-        DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
-        indicator.SetDamageText(damage);
-
+        ShowDamage(damage.ToString());
 
         if (health <=0)
         {
@@ -47,11 +44,6 @@ public class EnemyCharacter : Character
             int damage = playerWeaponScript.AttackDamage;
             TakeDamage(damage);
 
-            if (damageIndicator != null)
-            {
-                damageIndicator.SetDamageText(damage);
-            }
-
             Debug.Log("Enemy Hit");
         }
     }
@@ -69,5 +61,13 @@ public class EnemyCharacter : Character
         }
     }
 
+    void ShowDamage(string text)
+    {
+        if (floatingTextPrefab)
+        {
+            GameObject prefab = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity);
+            prefab.GetComponentInChildren<TextMeshPro>().text = text;
+        }
+    }
 
 }

@@ -634,6 +634,7 @@ MonoBehaviour:
   lootItems:
   - {fileID: 11400000, guid: 49ceee09270fd4d4485b9fca1939a724, type: 2}
   animator: {fileID: 8623818065401116407}
+  floatingTextPrefab: {fileID: 5687603822298467837, guid: b63ad8af1aa3ff1468dbfd463cdc84ca, type: 3}
 --- !u!114 &8623818064834976706
 MonoBehaviour:
   m_ObjectHideFlags: 0
