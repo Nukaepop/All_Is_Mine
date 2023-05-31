@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8616938632982914481}
   - component: {fileID: 6199788690600835570}
   - component: {fileID: 6199788690414798035}
+  - component: {fileID: 8936803777509857133}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -145,6 +146,22 @@ MonoBehaviour:
   outlinedSprite: {fileID: 21300000, guid: 4a4f32a02a5f48a4ea10069d5b4cbfef, type: 3}
   Object: {fileID: 8846488914590214142}
   inventoryScript: {fileID: 0}
+--- !u!114 &8936803777509857133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384725365428159454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &8846488914590214142
 GameObject:
   m_ObjectHideFlags: 0

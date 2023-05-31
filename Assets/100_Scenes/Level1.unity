@@ -926,9 +926,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1183760617796746657, guid: f51fa117cefeb5a4eb9404072e94dc71, type: 3}
+      propertyPath: m_VoxelSize
+      value: 0.1666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183760617796746657, guid: f51fa117cefeb5a4eb9404072e94dc71, type: 3}
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: c1672ee7c50ab474db4cd0fdd4f5b6d7, type: 2}
+    - target: {fileID: 1183760617796746657, guid: f51fa117cefeb5a4eb9404072e94dc71, type: 3}
+      propertyPath: m_OverrideTileSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183760617796746657, guid: f51fa117cefeb5a4eb9404072e94dc71, type: 3}
+      propertyPath: m_OverrideVoxelSize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1183760617796746659, guid: f51fa117cefeb5a4eb9404072e94dc71, type: 3}
       propertyPath: m_Name
       value: navMesh
@@ -116680,6 +116692,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 1377788390}
+    - target: {fileID: 8623818064834976707, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872642, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: m_RootOrder
       value: 0
