@@ -7,13 +7,17 @@ public class EnemyCharacter : Character
 {
 
     public WeaponParent playerWeaponScript;
-
-   public List<Item> lootItems;
-
+    public List<Item> lootItems;
     public Animator animator;
 
     public GameObject floatingTextPrefab;
+    [SerializeField] FloatingHelathBar healthBar;
 
+
+    private void Awake()
+    {
+        healthBar = GetComponentInChildren<FloatingHelathBar>();
+    }
 
     public override void TakeDamage(int damage)
     {
@@ -22,6 +26,8 @@ public class EnemyCharacter : Character
         // Autres actions spécifiques aux ennemis
         animator.SetTrigger("DamageReceived");
         ShowDamage(damage.ToString());
+
+        healthBar.UpdateHealthBar(health, maxHealth);
 
         if (health <=0)
         {

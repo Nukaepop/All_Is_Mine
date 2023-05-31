@@ -5,6 +5,12 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public float health;
+    public float maxHealth;
+
+    private void Awake()
+    {
+        health = maxHealth;
+    }
 
     public virtual void TakeDamage(int damage)
     {

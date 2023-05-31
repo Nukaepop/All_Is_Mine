@@ -509,6 +509,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c202e70d7ce4b5745a68d707d0cb3e5a, type: 3}
+--- !u!20 &554987635 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 583250205, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+  m_PrefabInstance: {fileID: 917037198844540307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &560719053 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5350287405327525874, guid: 94f09643e5b06684ab459f804b32448c, type: 3}
@@ -531,6 +536,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 917037198844540315}
+    - target: {fileID: 651729488, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 554987635}
+    - target: {fileID: 967155735, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 967155735, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerAnimator
       value: 
