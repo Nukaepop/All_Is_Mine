@@ -25,6 +25,12 @@ public class PlayerInventory : MonoBehaviour
     public bool canPickup = true;
     private bool isCollecting = false;
 
+
+    private bool isInteracting = false;
+    public float interactionTime = 2.0f; // Durée d'interaction requise en secondes
+    private float currentInteractionTime = 0.0f;
+
+
     #region GestionDesItemsDansLeSac
 
 
@@ -47,7 +53,23 @@ public class PlayerInventory : MonoBehaviour
         // Ramasser quand on appuie sur E et qu'on est dans la zone de trigger
         if (Input.GetKeyDown(KeyCode.E) && canPickup)
         {
-            CollectObjects();
+            if (!isInteracting)
+            {
+                isInteracting = true;
+                currentInteractionTime = 0.0f;
+            }
+        }
+
+        if (isInteracting)
+        {
+            currentInteractionTime += Time.deltaTime;
+
+            if (currentInteractionTime >= interactionTime)
+            {
+                CollectObjects();
+                isInteracting = false;
+                currentInteractionTime = 0.0f;
+            }
         }
 
         // Faire apparaître un objet présent dans le sac
@@ -92,6 +114,7 @@ public class PlayerInventory : MonoBehaviour
     {
         if (nearestObject != null)
         {
+
             // Définir la variable isCollecting à true pour indiquer qu'un objet est en cours de collecte
             isCollecting = true;
 

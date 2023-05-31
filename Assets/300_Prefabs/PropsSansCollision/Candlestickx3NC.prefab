@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6571903248125861781}
   - component: {fileID: 8839301424756114390}
   - component: {fileID: 8839301424973545207}
+  - component: {fileID: 1226557614982780369}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -145,6 +146,21 @@ MonoBehaviour:
   outlinedSprite: {fileID: 21300000, guid: 4a4f32a02a5f48a4ea10069d5b4cbfef, type: 3}
   Object: {fileID: 6225269821594590682}
   inventoryScript: {fileID: 0}
+--- !u!114 &1226557614982780369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581879655830649338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21748b3173de6c41aa489fdf4bead6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialBlinkInterval: 0.5
+  blinkIntervalIncrease: 0.25
+  blinkDuration: 0.1
 --- !u!1 &6225269821594590682
 GameObject:
   m_ObjectHideFlags: 0

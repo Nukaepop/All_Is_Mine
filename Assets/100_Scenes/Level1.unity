@@ -40965,7 +40965,7 @@ GameObject:
   - component: {fileID: 1192027487}
   - component: {fileID: 1192027486}
   - component: {fileID: 1192027489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap_Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101794,7 +101794,7 @@ GameObject:
   - component: {fileID: 1995560487}
   - component: {fileID: 1995560486}
   - component: {fileID: 1995560491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap_Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116739,6 +116739,10 @@ PrefabInstance:
     - target: {fileID: 8956344907588872642, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: health
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerWeaponScript

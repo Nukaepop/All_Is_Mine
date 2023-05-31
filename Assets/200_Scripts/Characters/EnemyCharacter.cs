@@ -10,6 +10,7 @@ public class EnemyCharacter : Character
 
    public List<Item> lootItems;
 
+    public Animator animator;
 
 
     public override void TakeDamage(float damage)
@@ -17,11 +18,13 @@ public class EnemyCharacter : Character
         // Logique spécifique pour les personnages ennemis lorsqu'ils subissent des dégâts
         base.TakeDamage(damage); // Appel à la méthode de la classe de base pour gérer les points de vie
         // Autres actions spécifiques aux ennemis
-        if(health <=0)
+        animator.SetTrigger("DamageReceived");
+        if (health <=0)
         {
             DropLoot(); // methode pour le butin
             Destroy(gameObject);
             Debug.Log("Enemy Died");
+
         }
     }
 
@@ -46,8 +49,8 @@ public class EnemyCharacter : Character
         {
             if (Random.value >= lootItem.dropRate)
             {
-                Vector2 randomOffset = Random.insideUnitCircle * 1.5f;
-                Vector3 spawnPosition = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0f);
+             /*   Vector2 randomOffset = Random.insideUnitCircle * 1.5f;*/
+                Vector3 spawnPosition = transform.position /*+ new Vector3(randomOffset.x, randomOffset.y, 0f)*/; 
                 Instantiate(lootItem.Object, spawnPosition, Quaternion.identity);
             }
         }
