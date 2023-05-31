@@ -19,6 +19,18 @@ public class EnemyCharacter : Character
         healthBar = GetComponentInChildren<FloatingHelathBar>();
     }
 
+    private void Update()
+    {
+        if (health >= maxHealth)
+        {
+            healthBar.HideHealthBar();
+        }
+        else
+        {
+            healthBar.ShowHealthBar();
+        }
+    }
+
     public override void TakeDamage(int damage)
     {
         // Logique spécifique pour les personnages ennemis lorsqu'ils subissent des dégâts

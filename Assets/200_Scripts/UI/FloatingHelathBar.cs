@@ -20,4 +20,14 @@ public void UpdateHealthBar(float currentValue, float maxValue)
         transform.rotation = camera.transform.rotation;
         transform.position = target.position + offset;
     }
+
+    public void ShowHealthBar()
+    {
+        slider.gameObject.SetActive(true);
+    }
+
+    public void HideHealthBar()
+    {
+        slider.gameObject.SetActive(false);
+    }
 }
