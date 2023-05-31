@@ -217,6 +217,7 @@ MonoBehaviour:
   weaponDamage: 3
   playerInventoryScript: {fileID: 0}
   playerMovementScript: {fileID: 0}
+  playerAnimator: {fileID: 0}
 --- !u!1 &8623818064191515084
 GameObject:
   m_ObjectHideFlags: 0

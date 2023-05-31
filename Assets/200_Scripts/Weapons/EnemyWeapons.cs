@@ -11,7 +11,7 @@ public class EnemyWeapons : MonoBehaviour
     public PlayerInventory playerInventoryScript;
     public PlayerMovement playerMovementScript;
 
-
+    public Animator playerAnimator;
 
     void start()
     {
@@ -23,10 +23,11 @@ public class EnemyWeapons : MonoBehaviour
     {
         if (other.tag == "Player" && !playerMovementScript.isInvincible)
         {
-
+            playerAnimator.SetTrigger("DamageReceived");
             Debug.Log("Collisions avec le joueur");
             if (playerInventoryScript.Inventory.Count > 0) // S'il y a des objets dans le sac
             {
+
                 int damage = weaponDamage;
                 while (compteur < damage && playerInventoryScript.Inventory.Count > 0)
                 {
