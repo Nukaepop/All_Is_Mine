@@ -13,10 +13,13 @@ public class StaminaWheel : MonoBehaviour
 
     public Slider usageSlider;
 
+    public Slider StaminaLockedSlider;
+
     private void Start()
     {
         staminaSlider.maxValue = playerMovementScript.MaxStamina;
         usageSlider.maxValue = playerMovementScript.MaxStamina;
+        usageSlider.maxValue = playerMovementScript.baseMaxStamina;
     }
 
     private void Update()
@@ -24,6 +27,8 @@ public class StaminaWheel : MonoBehaviour
         UpdateStaminaBar();
         FollowPlayer();
         UpdateSliderVisibility();
+
+
     }
 
     private void UpdateStaminaBar()
@@ -37,6 +42,8 @@ public class StaminaWheel : MonoBehaviour
         {
             usageSlider.value = playerMovementScript.currentStamina + (playerMovementScript.SprintStaminaCostRate/3);
         }
+
+
     }
 
     private void FollowPlayer()

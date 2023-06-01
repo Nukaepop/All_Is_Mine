@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -31,6 +32,10 @@ public class PlayerInventory : MonoBehaviour
     public float interactionTime = 2.0f; // Durée d'interaction requise en secondes
     private float currentInteractionTime = 0.0f;
 
+    public GameObject textMeshProObjectWeight;
+    public GameObject textMeshProObjectCount;
+    public TextMeshProUGUI textMeshProComponentWeight;
+    public TextMeshProUGUI textMeshProComponentCount;
 
     #region GestionDesItemsDansLeSac
 
@@ -43,7 +48,8 @@ public class PlayerInventory : MonoBehaviour
 
         canPickup = true;
 
-
+        textMeshProComponentCount = textMeshProObjectCount.GetComponent<TextMeshProUGUI>();
+        textMeshProComponentWeight = textMeshProObjectWeight.GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()
@@ -151,6 +157,9 @@ public class PlayerInventory : MonoBehaviour
 
             Item item = nearestObject.GetComponent<ItemController>().Item;
             Inventory.Add(item);
+
+            textMeshProComponentCount.text = Inventory.Count.ToString();
+
             TotalWeight = CalculateTotalWeight();
             bagSize = CalculateBagSize();
             Destroy(nearestObject);
@@ -190,6 +199,8 @@ public class PlayerInventory : MonoBehaviour
         Item ItemALancer = Inventory[(Random.Range(0, Inventory.Count))];
         Inventory.Remove(ItemALancer);
         projectile = ItemALancer.Object;
+
+        textMeshProComponentCount.text = Inventory.Count.ToString();
 
         float raycastDistance = 2f; // Distance maximale pour le raycast
         int maxAttempts = 10; // Nombre maximum de tentatives pour trouver une position sans collision
@@ -248,6 +259,9 @@ public class PlayerInventory : MonoBehaviour
 
         Debug.Log( "Poids total " + _TotalWeight);
         TotalWeight = _TotalWeight;
+
+        textMeshProComponentWeight.text = TotalWeight.ToString();
+
         return TotalWeight;
 
     }

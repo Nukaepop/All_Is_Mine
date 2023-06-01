@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveSpeed;
     public float WalkSpeed;
 
+    public ParticleSystem dust;
 
     [Header("Sprint")]
 
@@ -279,7 +280,18 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
             dashSpeed = baseDashSpeed;
-        }   
+        }
+
+        if (rb.velocity.magnitude > 0.05f) // Vérifie si le joueur est en mouvement
+        {
+            CreateDust();
+        }
     }
+
+    void CreateDust()
+    {
+        dust.Play();
+    }
+
 
 }
