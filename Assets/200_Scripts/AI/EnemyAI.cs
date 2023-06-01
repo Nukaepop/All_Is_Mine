@@ -21,6 +21,7 @@ public class EnemyAI : MonoBehaviour
     public float patrolSpeed = 2f;
 
     private bool playerDetected = false;
+    private bool isPlayerInView = false;
 
     public List<Transform> waypoints; // Liste des waypoints pour la ronde
     private int currentWaypointIndex = 0;
@@ -72,6 +73,9 @@ public class EnemyAI : MonoBehaviour
             {
                 Attack();
             }
+
+            isPlayerInView = true;
+
         }
 
         else if (isPatrolling)
@@ -135,6 +139,12 @@ public class EnemyAI : MonoBehaviour
     }
     private void StartPatrol()
     {
+        if(isPlayerInView)
+        {
+            animator.SetTrigger("PlayerLost");
+            isPlayerInView = false;
+        }
+
         playerDetected = false;
         isPatrolling = true;
         navMeshAgent.speed = patrolSpeed;
