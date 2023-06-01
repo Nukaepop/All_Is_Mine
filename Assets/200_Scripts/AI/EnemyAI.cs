@@ -20,6 +20,8 @@ public class EnemyAI : MonoBehaviour
     private bool isPatrolling;
     public float patrolSpeed = 2f;
 
+    private bool playerDetected = false;
+
     public List<Transform> waypoints; // Liste des waypoints pour la ronde
     private int currentWaypointIndex = 0;
 
@@ -46,6 +48,13 @@ public class EnemyAI : MonoBehaviour
         // Vérifier si le joueur est détecté
         if (DetectPlayer())
         {
+            if(!playerDetected)
+            {
+                animator.SetTrigger("PlayerDetected");
+                playerDetected = true;
+            }
+
+
             StopPatrol();
             MoveTowardsPlayer();
 
@@ -96,6 +105,8 @@ public class EnemyAI : MonoBehaviour
         // Vérifier si le joueur est à portée de détection
         if (distanceToPlayer <= detectionRange)
         {
+
+
             Debug.Log("Joueur en range");
             // Effectuer une vérification de ligne de vue/raycast pour s'assurer qu'il n'y a pas d'obstacles entre l'ennemi et le joueur
             return true;
@@ -124,6 +135,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void StartPatrol()
     {
+        playerDetected = false;
         isPatrolling = true;
         navMeshAgent.speed = patrolSpeed;
         animator.SetBool("isWalking", true);
