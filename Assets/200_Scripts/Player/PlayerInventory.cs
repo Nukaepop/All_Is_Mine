@@ -53,9 +53,39 @@ public class PlayerInventory : MonoBehaviour
         // Ramasser quand on appuie sur E et qu'on est dans la zone de trigger
         if (Input.GetKeyDown(KeyCode.E) && canPickup)
         {
+            StartInteracting();
+        }
+
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            StopInteracting();
+        }
+
+        if (isInteracting)
+        {
+            currentInteractionTime += Time.deltaTime;
+
+            if (currentInteractionTime >= interactionTime)
+            {
+                CollectObjects();
+                StopInteracting();
+            }
+        }
+
+        void StartInteracting()
+        {
             if (!isInteracting)
             {
                 isInteracting = true;
+                currentInteractionTime = 0.0f;
+            }
+        }
+
+        void StopInteracting()
+        {
+            if (isInteracting)
+            {
+                isInteracting = false;
                 currentInteractionTime = 0.0f;
             }
         }

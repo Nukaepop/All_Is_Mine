@@ -154,6 +154,7 @@ public class EnemyAI : MonoBehaviour
         Debug.Log("IA en ronde");
     }
 
+
     private void StopPatrol()
     {
         isPatrolling = false;
