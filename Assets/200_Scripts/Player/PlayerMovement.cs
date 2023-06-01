@@ -36,9 +36,11 @@ public class PlayerMovement : MonoBehaviour
     [Header("Roll")]
 
     public float rollDuration;
+    private float rollTimer = 0f;
     public bool isRolling = false;
     private Vector2 dashDirection;
     public float dashSpeed;
+    public float baseDashSpeed;
     public float RollStaminaCost;
 
 
@@ -94,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
         if(isRolling)
         {
             State = MovementState.Rolling;
-
+            animator.SetBool("isRolling", true);
 
             isUsingStamina = true;
         }
@@ -106,9 +108,12 @@ public class PlayerMovement : MonoBehaviour
 
             currentStamina -= (SprintStaminaCostRate * Time.deltaTime);
             isUsingStamina = true;
+
+            animator.SetBool("isRolling", false);
         }
         else
         {
+
             State = MovementState.Walking;
             moveSpeed = WalkSpeed;
             spriteRenderer.color = baseColor;
@@ -122,6 +127,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isWalking", true);
             }
+
+            animator.SetBool("isRolling", false);
         }
     }
 
@@ -130,6 +137,10 @@ public class PlayerMovement : MonoBehaviour
         baseColor = spriteRenderer.color;
         currentStamina = MaxStamina;
         hasStamina = true;
+
+        dashSpeed = baseDashSpeed;
+
+        animator.SetBool("isRolling", false);
     }
 
     // Update is called once per frame
@@ -172,7 +183,10 @@ public class PlayerMovement : MonoBehaviour
 
         MaxStamina = baseMaxStamina - InventoryScript.bagSize * 15;
 
+
     }
+
+
 
     private void FixedUpdate()
     {
@@ -210,8 +224,19 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer.color = Color.yellow;
 
 
-        yield return new WaitForSeconds(rollDuration);
 
+
+        rollTimer = 0f;
+        while (rollTimer < rollDuration)
+        {
+            // Diminuer la vitesse en fonction du temps écoulé
+            dashSpeed = Mathf.Lerp(baseDashSpeed, 0f, Mathf.Pow(rollTimer / rollDuration, 2));
+
+            // Augmenter le timer
+            rollTimer += Time.deltaTime;
+
+            yield return null;
+        }
         isRolling = false;
         InventoryScript.canPickup = true;
         dashDirection = Vector2.zero;
@@ -253,6 +278,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+            dashSpeed = baseDashSpeed;
         }   
     }
 
