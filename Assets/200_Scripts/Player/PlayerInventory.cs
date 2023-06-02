@@ -37,6 +37,9 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI textMeshProComponentWeight;
     public TextMeshProUGUI textMeshProComponentCount;
 
+
+
+
     #region GestionDesItemsDansLeSac
 
 
@@ -48,8 +51,29 @@ public class PlayerInventory : MonoBehaviour
 
         canPickup = true;
 
+
         textMeshProComponentCount = textMeshProObjectCount.GetComponent<TextMeshProUGUI>();
         textMeshProComponentWeight = textMeshProObjectWeight.GetComponent<TextMeshProUGUI>();
+
+        textMeshProComponentCount.text = Inventory.Count.ToString();
+        textMeshProComponentWeight.text = TotalWeight.ToString();
+
+        if(Inventory.Count == 0)
+        {
+            textMeshProComponentCount.color = Color.red;
+        }
+        else
+        {
+            textMeshProComponentCount.color = Color.blue;
+        }
+        if(TotalWeight <= 0)
+        {
+            textMeshProComponentWeight.color = Color.red;
+        }
+        else
+        {
+            textMeshProComponentWeight.color = Color.white;
+        }
     }
 
     private void Update()
@@ -160,6 +184,15 @@ public class PlayerInventory : MonoBehaviour
 
             textMeshProComponentCount.text = Inventory.Count.ToString();
 
+            if (Inventory.Count == 0)
+            {
+                textMeshProComponentCount.color = Color.red;
+            }
+            else
+            {
+                textMeshProComponentCount.color = Color.blue;
+            }
+
             TotalWeight = CalculateTotalWeight();
             bagSize = CalculateBagSize();
             Destroy(nearestObject);
@@ -195,6 +228,7 @@ public class PlayerInventory : MonoBehaviour
     public void LoseItems()
     {
 
+
         // Prendre un item aléatoire dans le sac
         Item ItemALancer = Inventory[(Random.Range(0, Inventory.Count))];
         Inventory.Remove(ItemALancer);
@@ -202,7 +236,16 @@ public class PlayerInventory : MonoBehaviour
 
         textMeshProComponentCount.text = Inventory.Count.ToString();
 
-        float raycastDistance = 2f; // Distance maximale pour le raycast
+        if (Inventory.Count == 0)
+        {
+            textMeshProComponentCount.color = Color.red;
+        }
+        else
+        {
+            textMeshProComponentCount.color = Color.blue;
+        }
+
+            float raycastDistance = 2f; // Distance maximale pour le raycast
         int maxAttempts = 10; // Nombre maximum de tentatives pour trouver une position sans collision
         int attemptCount = 0; // Compteur de tentatives
 
@@ -261,6 +304,16 @@ public class PlayerInventory : MonoBehaviour
         TotalWeight = _TotalWeight;
 
         textMeshProComponentWeight.text = TotalWeight.ToString();
+
+        if (TotalWeight <= 0)
+        {
+            textMeshProComponentWeight.color = Color.red;
+        }
+        else
+        {
+            textMeshProComponentWeight.color = Color.white;
+        }
+
 
         return TotalWeight;
 
