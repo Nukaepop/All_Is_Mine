@@ -325,25 +325,25 @@ public class PlayerInventory : MonoBehaviour
     {
         int _bagSize = 0;
 
-        if (TotalWeight < 5)
+        if (TotalWeight < 10)
         {
             _bagSize = 0;
         }
-        else if (TotalWeight >= 5 && TotalWeight < 10)
+        else if (TotalWeight >= 10 && TotalWeight < 30)
         {
             _bagSize = 1;
         }
-        else if (TotalWeight >= 10 && TotalWeight < 15)
+        else if (TotalWeight >= 30 && TotalWeight < 50)
         {
             _bagSize = 2;
         }
-        else if (TotalWeight >= 15 && TotalWeight < 20)
+    /*    else if (TotalWeight >= 15 && TotalWeight < 20)
         {
             _bagSize = 3;
-        }
+        }*/
         else
         {
-            _bagSize = 4;
+            _bagSize = 3;
         }
 
         Debug.Log("taille du sac " + _bagSize);

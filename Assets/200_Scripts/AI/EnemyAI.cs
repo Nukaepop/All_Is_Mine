@@ -182,6 +182,12 @@ public class EnemyAI : MonoBehaviour
     private void Attack()
     {
         animator.SetBool("isWalking", false);
+
+        //stance
+
+
+
+        //attaque
         animator.SetTrigger("Attack");
         isAttacking = true;
         // Ajoutez ici votre logique d'attaque
