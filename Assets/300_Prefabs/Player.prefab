@@ -5485,6 +5485,7 @@ MonoBehaviour:
   textMeshProObjectCount: {fileID: 0}
   textMeshProComponentWeight: {fileID: 0}
   textMeshProComponentCount: {fileID: 0}
+  floatingTextPrefab: {fileID: 5687603822298467837, guid: 5ba08647245b71045a34925e4476fd48, type: 3}
 --- !u!70 &917037198844540316
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

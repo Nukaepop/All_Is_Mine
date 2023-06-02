@@ -7,6 +7,7 @@ public class EnemyWeapons : MonoBehaviour
 
     public int weaponDamage; // Le nombre d'aobjets que le joueur va perdre
     private int compteur = 0;
+    public int itemsLost = 0;
 
     public PlayerInventory playerInventoryScript;
     public PlayerMovement playerMovementScript;
@@ -34,8 +35,11 @@ public class EnemyWeapons : MonoBehaviour
                     Debug.Log("Perte d'objet");
                     playerInventoryScript.LoseItems();
                     compteur++;
+                    itemsLost++;
                 }
+                playerInventoryScript.ShowDamage(itemsLost.ToString());
                 compteur = 0;
+                itemsLost = 0;
                 playerMovementScript.isInvincible = true;
             }
             else // Si le sac est vide

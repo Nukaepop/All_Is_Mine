@@ -37,7 +37,7 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI textMeshProComponentWeight;
     public TextMeshProUGUI textMeshProComponentCount;
 
-
+    public GameObject floatingTextPrefab;
 
 
     #region GestionDesItemsDansLeSac
@@ -245,7 +245,7 @@ public class PlayerInventory : MonoBehaviour
             textMeshProComponentCount.color = Color.blue;
         }
 
-            float raycastDistance = 2f; // Distance maximale pour le raycast
+        float raycastDistance = 2f; // Distance maximale pour le raycast
         int maxAttempts = 10; // Nombre maximum de tentatives pour trouver une position sans collision
         int attemptCount = 0; // Compteur de tentatives
 
@@ -356,6 +356,13 @@ public class PlayerInventory : MonoBehaviour
 
     #endregion
 
-
+    public void ShowDamage(string text)
+    {
+        if (floatingTextPrefab)
+        {
+            GameObject prefab = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity);
+            prefab.GetComponentInChildren<TextMeshPro>().text = text;
+        }
+    }
 
 }

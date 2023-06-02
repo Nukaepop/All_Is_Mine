@@ -594,17 +594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0088e98bd30898d43807fe6f677424ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1218199765 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
-  m_PrefabInstance: {fileID: 579220016}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f0d448063828084b89d759ef8aa79da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1278725872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -977,14 +966,6 @@ PrefabInstance:
     - target: {fileID: 917037197784156785, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6754937888544410552, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
-      propertyPath: enemyWeponScript
-      value: 
-      objectReference: {fileID: 1218199765}
-    - target: {fileID: 6754937888544410552, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
-      propertyPath: floatingTextPrefab
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6754937888544410552, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: textMeshProObjectCount
