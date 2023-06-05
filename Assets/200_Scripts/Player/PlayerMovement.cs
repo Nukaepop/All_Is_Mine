@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -70,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
     private bool hasStamina = true;
     public bool isUsingStamina = false;
 
+    public Image staminaBar;
 
     [Header("Invincibility")]
 
@@ -164,6 +166,15 @@ public class PlayerMovement : MonoBehaviour
         if (currentStamina <= 0)
         {
             hasStamina = false;
+
+            // Faire clignoter la barre de stamina en rouge
+            float alpha = Mathf.PingPong(Time.time * 3f, 1f); // Contrôle la transparence (alpha) en utilisant une fonction de ping-pong
+            staminaBar.color = new Color(1f, 0f, 0f, alpha); // Définit la couleur de la barre de stamina en rouge avec l'alpha calculé
+        }
+        else
+        {
+            // Restaurer la couleur normale de la barre de stamina
+            staminaBar.color = Color.green;
         }
 
         if (!isUsingStamina)
