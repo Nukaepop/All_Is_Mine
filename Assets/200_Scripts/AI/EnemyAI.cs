@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
     public Transform transform;
     private Vector2 weaponDirection;
 
+    [SerializeField] AttackBar attackBarScript;
 
     public float detectionRange = 10f; // Portée de détection du joueur
     private float distanceToPlayer;
@@ -17,6 +18,7 @@ public class EnemyAI : MonoBehaviour
     public float attackRange;
     public float attackCooldown;
     public float stanceDuration;
+    private float currentStanceTime = 0f;
 
     private bool isPatrolling;
     public float patrolSpeed = 2f;
@@ -43,6 +45,9 @@ public class EnemyAI : MonoBehaviour
         navMeshAgent.updateUpAxis = false;
 
         StartPatrol();
+
+        currentStanceTime = 0;
+        attackBarScript.HideAttackBar();
     }
 
     private void Update()
@@ -73,6 +78,8 @@ public class EnemyAI : MonoBehaviour
             if (!isAttacking && hasCooldown && distanceToPlayer <= attackRange)
             {
                 Attack();
+                currentStanceTime += Time.deltaTime;
+                attackBarScript.UpdateAttackBar(currentStanceTime, stanceDuration);
             }
 
             isPlayerInView = true;
@@ -183,28 +190,39 @@ public class EnemyAI : MonoBehaviour
     private void Attack()
     {
         animator.SetBool("isWalking", false);
-
-        //stance
-
         //attaque
-        animator.SetTrigger("Attack");
-        isAttacking = true;
-        // Ajoutez ici votre logique d'attaque
-        // Par exemple, déclencher une animation d'attaque, infliger des dégâts au joueur, etc.
-        Debug.Log("IA attaque");
+        StartCoroutine(AttackStance());
 
-        StartCoroutine(AttackCooldown());
-        isMovingToPlayer = true;
     }
 
 
 
     private IEnumerator AttackCooldown()
     {
+        currentStanceTime = 0f;
         hasCooldown = false;
         yield return new WaitForSeconds(attackCooldown);
+        animator.SetBool("isAttacking", false);
+
         hasCooldown = true;
         isAttacking = false;
+
+    }
+
+    private IEnumerator AttackStance()
+    {
+        attackBarScript.ShowAttackBar();
+        yield return new WaitForSeconds(stanceDuration);
+        attackBarScript.HideAttackBar();
+
+        animator.SetBool("isAttacking", true);
+        isAttacking = true;
+        // Ajoutez ici votre logique d'attaque
+        // Par exemple, déclencher une animation d'attaque, infliger des dégâts au joueur, etc.
+        Debug.Log("IA attaque");
+        StartCoroutine(AttackCooldown());
+
+        isMovingToPlayer = true;
     }
 
     private Vector2 GetWeaponDirection()
