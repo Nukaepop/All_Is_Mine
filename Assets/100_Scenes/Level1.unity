@@ -138,6 +138,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -267,6 +279,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -670,6 +694,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -835,6 +871,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -1371,6 +1419,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -1616,6 +1676,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -1861,6 +1933,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -2069,6 +2153,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -6290,6 +6386,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -6977,6 +7085,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -7232,6 +7352,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 98093969, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: inventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
+    - target: {fileID: 1943584894342892561, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943584894342892561, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3258657059448014544, guid: d52de59d84edf134699dc8021d133480, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -7328,14 +7460,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3258657060061643594, guid: d52de59d84edf134699dc8021d133480, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3258657060061643594, guid: d52de59d84edf134699dc8021d133480, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d52de59d84edf134699dc8021d133480, type: 3}
 --- !u!114 &783854261 stripped
@@ -7411,6 +7535,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -40612,6 +40748,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -41379,6 +41527,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -41653,6 +41813,10 @@ PrefabInstance:
       propertyPath: dashSpeed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: staminaBar
+      value: 
+      objectReference: {fileID: 1380283017}
     - target: {fileID: 917037197784156751, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: m_Name
       value: Player
@@ -47621,6 +47785,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -48600,6 +48776,17 @@ Transform:
   m_Father: {fileID: 483661787}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1380283017 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1943584894342892560, guid: d52de59d84edf134699dc8021d133480, type: 3}
+  m_PrefabInstance: {fileID: 783854260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1381418757
 GameObject:
   m_ObjectHideFlags: 0
@@ -49038,6 +49225,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -101904,6 +102103,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -102043,6 +102254,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -102637,6 +102860,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -102782,6 +103017,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -103089,6 +103336,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
@@ -103590,6 +103849,11 @@ MonoBehaviour:
 --- !u!212 &1912124036 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 917037197784156786, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+  m_PrefabInstance: {fileID: 1144029549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1912124038 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 917037198844540309, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
   m_PrefabInstance: {fileID: 1144029549}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1925145352 stripped
@@ -118759,6 +119023,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280787874, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerMovementScript
       value: 
