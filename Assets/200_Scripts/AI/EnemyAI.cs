@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
 
     public float attackRange;
     public float attackCooldown;
+    public float stanceDuration;
 
     private bool isPatrolling;
     public float patrolSpeed = 2f;
@@ -185,8 +186,6 @@ public class EnemyAI : MonoBehaviour
 
         //stance
 
-
-
         //attaque
         animator.SetTrigger("Attack");
         isAttacking = true;
@@ -197,6 +196,8 @@ public class EnemyAI : MonoBehaviour
         StartCoroutine(AttackCooldown());
         isMovingToPlayer = true;
     }
+
+
 
     private IEnumerator AttackCooldown()
     {
