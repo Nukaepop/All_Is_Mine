@@ -14,6 +14,11 @@ public void UpdateHealthBar(float currentValue, float maxValue)
         slider.value = currentValue / maxValue;
     }
 
+    void Start()
+    {
+
+    }
+
     // Update is called once per frame
     void Update()
     {
