@@ -7338,6 +7338,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d52de59d84edf134699dc8021d133480, type: 3}
+--- !u!114 &783854261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1943584893682907154, guid: d52de59d84edf134699dc8021d133480, type: 3}
+  m_PrefabInstance: {fileID: 783854260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &783854262 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7796076348026984466, guid: d52de59d84edf134699dc8021d133480, type: 3}
+  m_PrefabInstance: {fileID: 783854260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &807412047
 GameObject:
   m_ObjectHideFlags: 0
@@ -102532,11 +102554,15 @@ PrefabInstance:
     - target: {fileID: 6112537221625529697, guid: 0cbb2d45ef8baf7418e456f33f1dfd6f, type: 3}
       propertyPath: staminaSlider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 783854261}
     - target: {fileID: 6112537221625529697, guid: 0cbb2d45ef8baf7418e456f33f1dfd6f, type: 3}
       propertyPath: sliderCanvasGroup
       value: 
       objectReference: {fileID: 1513885209}
+    - target: {fileID: 6112537221625529697, guid: 0cbb2d45ef8baf7418e456f33f1dfd6f, type: 3}
+      propertyPath: StaminaLockedSlider
+      value: 
+      objectReference: {fileID: 783854262}
     - target: {fileID: 6112537221625529697, guid: 0cbb2d45ef8baf7418e456f33f1dfd6f, type: 3}
       propertyPath: sliderRectTransform
       value: 
