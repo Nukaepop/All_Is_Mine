@@ -54,7 +54,7 @@ public class StaminaWheel : MonoBehaviour
 
     private void UpdateSliderVisibility()
     {
-        if (playerMovementScript.isUsingStamina || playerMovementScript.currentStamina < playerMovementScript.MaxStamina)
+        if (playerMovementScript.isUsingStamina || playerMovementScript.currentStamina < playerMovementScript.MaxStamina || playerMovementScript.showingBar == true)
         {
             sliderCanvasGroup.alpha = 1f;
         }

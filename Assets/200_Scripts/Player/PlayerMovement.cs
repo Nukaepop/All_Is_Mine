@@ -73,6 +73,9 @@ public class PlayerMovement : MonoBehaviour
 
     public Image staminaBar;
 
+    public bool showingBar = false;
+    private float delay = 0.5f;
+
     [Header("Invincibility")]
 
     public bool isInvincible = false;
@@ -166,15 +169,6 @@ public class PlayerMovement : MonoBehaviour
         if (currentStamina <= 0)
         {
             hasStamina = false;
-
-            // Faire clignoter la barre de stamina en rouge
-            float alpha = Mathf.PingPong(Time.time * 3f, 1f); // Contrôle la transparence (alpha) en utilisant une fonction de ping-pong
-            staminaBar.color = new Color(1f, 0f, 0f, alpha); // Définit la couleur de la barre de stamina en rouge avec l'alpha calculé
-        }
-        else
-        {
-            // Restaurer la couleur normale de la barre de stamina
-            staminaBar.color = Color.green;
         }
 
         if (!isUsingStamina)
@@ -189,16 +183,36 @@ public class PlayerMovement : MonoBehaviour
 
             if (!hasStamina)
             {
+                showingBar = true;
                 hasStamina = true;
+                // Restaurer la couleur normale de la barre de stamina
+                staminaBar.color = Color.green;
+                StartCoroutine(Delay());
+
             }
         }
 
+
+
         MaxStamina = baseMaxStamina - InventoryScript.bagSize * 15;
 
-
+        if(!hasStamina)
+        {
+            // Faire clignoter la barre de stamina en rouge
+            float alpha = Mathf.PingPong(Time.time * 3f, 1f); // Contrôle la transparence (alpha) en utilisant une fonction de ping-pong
+            staminaBar.color = new Color(1f, 0f, 0f, alpha); // Définit la couleur de la barre de stamina en rouge avec l'alpha calculé
+        }
+        else
+        {
+            staminaBar.color = new Color(0f, 1f, 0f, 1);
+        }
     }
 
-
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(delay);
+        showingBar = false;
+    }
 
     private void FixedUpdate()
     {
