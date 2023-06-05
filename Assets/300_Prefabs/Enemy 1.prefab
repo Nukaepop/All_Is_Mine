@@ -326,7 +326,7 @@ MonoBehaviour:
   slider: {fileID: 651729489}
   camera: {fileID: 0}
   target: {fileID: 8956344907588872642}
-  offset: {x: 0, y: 0.5, z: 0}
+  offset: {x: 0, y: 0.6, z: 0}
 --- !u!1 &726735872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,10 +1431,10 @@ MonoBehaviour:
   enemyWeapon: {fileID: 8623818064191515091}
   transform: {fileID: 8956344907588872642}
   attackBarScript: {fileID: 726735874}
-  detectionRange: 5
-  attackRange: 2
+  detectionRange: 6
+  attackRange: 3
   attackCooldown: 1.5
-  stanceDuration: 1
+  stanceDuration: 0.6
   patrolSpeed: 3
   waypoints:
   - {fileID: 0}

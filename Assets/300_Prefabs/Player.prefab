@@ -5457,6 +5457,8 @@ MonoBehaviour:
   staminaRecoveryRate: 10
   baseMaxStamina: 100
   isUsingStamina: 0
+  staminaBar: {fileID: 0}
+  showingBar: 0
   isInvincible: 0
   invincibilityDuration: 0.5
   invincibilityTimer: 0
