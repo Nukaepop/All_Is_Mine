@@ -1485,11 +1485,11 @@ MonoBehaviour:
   enemyWeapon: {fileID: 8623818064191515091}
   transform: {fileID: 8956344907588872642}
   attackBarScript: {fileID: 726735874}
-  detectionRange: 6
-  attackDistance: 1.25
-  attackRange: 2.25
+  detectionRange: 6.5
+  attackDistance: 0.6
+  attackRange: 1.75
   attackCooldown: 1
-  stanceDuration: 0.5
+  stanceDuration: 0.7
   patrolSpeed: 3.5
   waypoints:
   - {fileID: 0}

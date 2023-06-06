@@ -101,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isRolling)
         {
+            DisableCollisionsWithEnemies();
             State = MovementState.Rolling;
             animator.SetBool("isRolling", true);
 
@@ -112,6 +113,8 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = SprintSpeed;
             spriteRenderer.color = Color.magenta;
 
+            EnableCollisionsWithEnemies();
+
             currentStamina -= (SprintStaminaCostRate * Time.deltaTime);
             isUsingStamina = true;
 
@@ -119,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            EnableCollisionsWithEnemies();
 
             State = MovementState.Walking;
             moveSpeed = WalkSpeed;
@@ -323,4 +327,19 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+    void DisableCollisionsWithEnemies()
+    {
+        int layer1 = LayerMask.NameToLayer("Player");
+        int layer2 = LayerMask.NameToLayer("Enemy");
+
+        Physics2D.IgnoreLayerCollision(layer1, layer2, true);
+    }
+
+    void EnableCollisionsWithEnemies()
+    {
+        int layer1 = LayerMask.NameToLayer("Player");
+        int layer2 = LayerMask.NameToLayer("Enemy");
+
+        Physics2D.IgnoreLayerCollision(layer1, layer2, false);
+    }
 }
