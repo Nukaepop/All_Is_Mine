@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
 
     public float detectionRange = 10f; // Portée de détection du joueur
     private float distanceToPlayer;
+    public float attackDistance;
 
     public float attackRange;
     public float attackCooldown;
@@ -75,11 +76,12 @@ public class EnemyAI : MonoBehaviour
 
             }
 
-            if (!isAttacking && hasCooldown && distanceToPlayer <= attackRange)
+            if (!isAttacking && hasCooldown && distanceToPlayer <= attackRange && distanceToPlayer > attackDistance)
             {
                 Attack();
                 currentStanceTime += Time.deltaTime;
                 attackBarScript.UpdateAttackBar(currentStanceTime, stanceDuration);
+                navMeshAgent.speed = 0f;
             }
 
             isPlayerInView = true;
@@ -130,6 +132,7 @@ public class EnemyAI : MonoBehaviour
 
     private void MoveTowardsPlayer()
     {
+        navMeshAgent.speed = 3.5f;
         if (!isAttacking)
         {
             animator.SetBool("isWalking", true);
@@ -138,7 +141,7 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("IA en mouvement");
 
             // Vérifier si l'ennemi a atteint sa destination
-            if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+            if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance + attackDistance)
             {
                 isMovingToPlayer = false;
             }
@@ -147,7 +150,8 @@ public class EnemyAI : MonoBehaviour
     }
     private void StartPatrol()
     {
-        if(isPlayerInView)
+        navMeshAgent.speed = 3.5f;
+        if (isPlayerInView)
         {
             animator.SetTrigger("PlayerLost");
             isPlayerInView = false;

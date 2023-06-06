@@ -247,7 +247,6 @@ public class PlayerMovement : MonoBehaviour
         // Effectuer les actions nécessaires pour la roulade (animations, mouvements, etc.)
         isInvincible = true;
         InventoryScript.canPickup = false;
-        spriteRenderer.color = Color.yellow;
 
 
 
@@ -301,7 +300,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = dashDirection * dashSpeed;
         }
-        else
+        else if(!weaponParentScript.isAttacking)
         {
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
             dashSpeed = baseDashSpeed;

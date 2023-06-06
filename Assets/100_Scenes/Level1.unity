@@ -251,6 +251,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 1946334091}
@@ -397,6 +401,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
@@ -807,6 +815,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 1946334091}
@@ -981,6 +993,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
@@ -1532,6 +1548,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 1946334091}
@@ -1786,6 +1806,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
@@ -2046,6 +2070,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 1946334091}
@@ -2263,6 +2291,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
@@ -6499,6 +6531,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 1946334091}
@@ -7198,6 +7234,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 1946334091}
@@ -7356,6 +7396,38 @@ PrefabInstance:
       propertyPath: inventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 299022939, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 299022939, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 299022939, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 299022939, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 299022939, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 299022939, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 299022939, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.01501831
+      objectReference: {fileID: 0}
+    - target: {fileID: 299022939, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.040007934
+      objectReference: {fileID: 0}
     - target: {fileID: 1943584894342892561, guid: d52de59d84edf134699dc8021d133480, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -7367,6 +7439,14 @@ PrefabInstance:
     - target: {fileID: 3258657059448014544, guid: d52de59d84edf134699dc8021d133480, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258657059448014557, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258657059448014557, guid: d52de59d84edf134699dc8021d133480, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3258657059448014559, guid: d52de59d84edf134699dc8021d133480, type: 3}
       propertyPath: m_Pivot.x
@@ -7645,6 +7725,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
@@ -40861,6 +40945,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 1946334091}
@@ -41637,6 +41725,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
@@ -47898,6 +47990,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 1946334091}
@@ -49335,6 +49431,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
@@ -102216,6 +102316,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 1946334091}
@@ -102364,6 +102468,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
@@ -102973,6 +103081,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 1946334091}
@@ -103127,6 +103239,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
@@ -103446,6 +103562,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
@@ -119133,6 +119253,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8956344907588872643, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
