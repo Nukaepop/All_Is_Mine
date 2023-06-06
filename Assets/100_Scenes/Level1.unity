@@ -119147,6 +119147,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956344907588872642, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
   m_PrefabInstance: {fileID: 1757084493}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2120514924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6968600975820594078, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+  m_PrefabInstance: {fileID: 5205148943934310414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2120514926
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120514924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35f31f5b20bc5b94391d35cd2cae737c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &2133317446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8956344907588872642, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
@@ -119200,6 +119226,10 @@ PrefabInstance:
       propertyPath: transform
       value: 
       objectReference: {fileID: 1148939931}
+    - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: weaponAnimator
+      value: 
+      objectReference: {fileID: 2120514926}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: waypoints.Array.size
       value: 4

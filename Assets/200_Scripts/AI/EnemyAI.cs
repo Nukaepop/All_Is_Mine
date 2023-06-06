@@ -35,6 +35,7 @@ public class EnemyAI : MonoBehaviour
     private bool isMovingToPlayer = false;
 
     public Animator animator;
+    public Animator weaponAnimator;
 
     private NavMeshAgent navMeshAgent;
 
@@ -212,7 +213,7 @@ public class EnemyAI : MonoBehaviour
 
             yield return new WaitForSeconds(attackCooldown);
 
-        animator.SetBool("isAttacking", false);
+        weaponAnimator.SetBool("isAttacking", false);
 
         hasCooldown = true;
 
@@ -226,7 +227,7 @@ public class EnemyAI : MonoBehaviour
 
         if(distanceToPlayer <= attackRange)
         {
-            animator.SetBool("isAttacking", true);
+            weaponAnimator.SetBool("isAttacking", true);
             isAttacking = true;
             // Ajoutez ici votre logique d'attaque
             // Par exemple, déclencher une animation d'attaque, infliger des dégâts au joueur, etc.
