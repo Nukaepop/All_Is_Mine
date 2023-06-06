@@ -39,6 +39,8 @@ public class PlayerInventory : MonoBehaviour
 
     public GameObject floatingTextPrefab;
 
+    public InteractionBar interactionBarScript;
+
 
     #region GestionDesItemsDansLeSac
 
@@ -74,6 +76,8 @@ public class PlayerInventory : MonoBehaviour
         {
             textMeshProComponentWeight.color = Color.white;
         }
+
+        interactionBarScript.HideInteractionBar();
     }
 
     private void Update()
@@ -95,6 +99,7 @@ public class PlayerInventory : MonoBehaviour
         if (isInteracting)
         {
             currentInteractionTime += Time.deltaTime;
+            interactionBarScript.UpdateInteractionBar(currentInteractionTime, interactionTime);
 
             if (currentInteractionTime >= interactionTime)
             {
@@ -109,6 +114,7 @@ public class PlayerInventory : MonoBehaviour
             {
                 isInteracting = true;
                 currentInteractionTime = 0.0f;
+                interactionBarScript.ShowInteractionBar();
             }
         }
 
@@ -118,20 +124,10 @@ public class PlayerInventory : MonoBehaviour
             {
                 isInteracting = false;
                 currentInteractionTime = 0.0f;
+                interactionBarScript.HideInteractionBar();
             }
         }
 
-        if (isInteracting)
-        {
-            currentInteractionTime += Time.deltaTime;
-
-            if (currentInteractionTime >= interactionTime)
-            {
-                CollectObjects();
-                isInteracting = false;
-                currentInteractionTime = 0.0f;
-            }
-        }
 
         // Faire apparaître un objet présent dans le sac
         if (Input.GetKeyDown(KeyCode.F) && Inventory.Count != 0)
