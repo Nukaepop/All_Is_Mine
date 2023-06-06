@@ -1432,11 +1432,11 @@ MonoBehaviour:
   transform: {fileID: 8956344907588872642}
   attackBarScript: {fileID: 726735874}
   detectionRange: 6
-  attackDistance: 0
-  attackRange: 2
-  attackCooldown: 2
+  attackDistance: 1.25
+  attackRange: 2.25
+  attackCooldown: 1
   stanceDuration: 0.8
-  patrolSpeed: 3
+  patrolSpeed: 3.5
   waypoints:
   - {fileID: 0}
   - {fileID: 0}

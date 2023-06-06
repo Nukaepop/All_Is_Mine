@@ -66,7 +66,7 @@ public class EnemyAI : MonoBehaviour
             StopPatrol();
             MoveTowardsPlayer();
 
-            if (!isAttacking)
+            if (!isAttacking )
             {
                 //arme qui suis le joueur
                 Vector3 difference = player.position - enemyWeapon.position;
@@ -132,10 +132,13 @@ public class EnemyAI : MonoBehaviour
 
     private void MoveTowardsPlayer()
     {
-        navMeshAgent.speed = 3.5f;
-        if (!isAttacking)
+        
+        if (!isAttacking && hasCooldown)
         {
+            navMeshAgent.speed = 3.5f;
             animator.SetBool("isWalking", true);
+
+
 
             navMeshAgent.SetDestination(player.position); // Définir la destination du joueur pour le NavMeshAgent
             Debug.Log("IA en mouvement");
@@ -159,7 +162,6 @@ public class EnemyAI : MonoBehaviour
 
         playerDetected = false;
         isPatrolling = true;
-        navMeshAgent.speed = patrolSpeed;
         animator.SetBool("isWalking", true);
         // Définir la destination initiale du premier waypoint
         navMeshAgent.SetDestination(waypoints[currentWaypointIndex].position);
@@ -205,11 +207,14 @@ public class EnemyAI : MonoBehaviour
     {
         currentStanceTime = 0f;
         hasCooldown = false;
-        yield return new WaitForSeconds(attackCooldown);
+        isAttacking = false;
+
+
+            yield return new WaitForSeconds(attackCooldown);
+
         animator.SetBool("isAttacking", false);
 
         hasCooldown = true;
-        isAttacking = false;
 
     }
 
@@ -219,14 +224,18 @@ public class EnemyAI : MonoBehaviour
         yield return new WaitForSeconds(stanceDuration);
         attackBarScript.HideAttackBar();
 
-        animator.SetBool("isAttacking", true);
-        isAttacking = true;
-        // Ajoutez ici votre logique d'attaque
-        // Par exemple, déclencher une animation d'attaque, infliger des dégâts au joueur, etc.
-        Debug.Log("IA attaque");
-        StartCoroutine(AttackCooldown());
+        if(distanceToPlayer <= attackRange)
+        {
+            animator.SetBool("isAttacking", true);
+            isAttacking = true;
+            // Ajoutez ici votre logique d'attaque
+            // Par exemple, déclencher une animation d'attaque, infliger des dégâts au joueur, etc.
+            Debug.Log("IA attaque");
+            StartCoroutine(AttackCooldown());
+        }
 
-        isMovingToPlayer = true;
+
+       // isMovingToPlayer = true;
     }
 
     private Vector2 GetWeaponDirection()
