@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5666250212555317867}
   - component: {fileID: 5666250212167966538}
   - component: {fileID: 5235721698576829456}
+  - component: {fileID: 1082985337}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -158,10 +159,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21748b3173de6c41aa489fdf4bead6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyScript: {fileID: 6771805099754117975}
   initialBlinkInterval: 0.5
   blinkIntervalIncrease: 0.1
   blinkDuration: 0.1
+--- !u!95 &1082985337
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837399159609350215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1974d2001f12906419a4540cdbb95d2f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7092475308845890663
 GameObject:
   m_ObjectHideFlags: 0
