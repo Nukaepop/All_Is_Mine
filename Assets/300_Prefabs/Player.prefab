@@ -5565,6 +5565,7 @@ MonoBehaviour:
   textMeshProComponentWeight: {fileID: 0}
   textMeshProComponentCount: {fileID: 0}
   floatingTextPrefab: {fileID: 5687603822298467837, guid: 5ba08647245b71045a34925e4476fd48, type: 3}
+  interactionBarScript: {fileID: 1049641690}
 --- !u!70 &917037198844540316
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5789,8 +5790,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8113759499263502209}
   - component: {fileID: 4929501357661999952}
+  - component: {fileID: 1049641690}
   m_Layer: 5
-  m_Name: AttackBar
+  m_Name: interactionBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5869,6 +5871,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1049641690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066591391409001789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfefa237de80f64a8d579cf9513f084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionSlider: {fileID: 4929501357661999952}
 --- !u!1 &8459853270478633398
 GameObject:
   m_ObjectHideFlags: 0

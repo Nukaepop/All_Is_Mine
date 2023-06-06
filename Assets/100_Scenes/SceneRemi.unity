@@ -502,35 +502,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956344907588872642, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
   m_PrefabInstance: {fileID: 579220016}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1049641687 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7066591391409001789, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
-  m_PrefabInstance: {fileID: 917037198844540307}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1049641689 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4929501357661999952, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
-  m_PrefabInstance: {fileID: 917037198844540307}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049641687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1049641690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049641687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cfefa237de80f64a8d579cf9513f084, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionSlider: {fileID: 1049641689}
 --- !u!1 &1060773623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,10 +1644,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6754937888544410552, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
-      propertyPath: interactionBarScript
-      value: 
-      objectReference: {fileID: 1049641690}
-    - target: {fileID: 6754937888544410552, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: textMeshProObjectCount
       value: 
       objectReference: {fileID: 1577624422}
@@ -1692,23 +1659,11 @@ PrefabInstance:
       propertyPath: textMeshProComponentWeight
       value: 
       objectReference: {fileID: 1511884021}
-    - target: {fileID: 7066591391409001789, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
-      propertyPath: m_Name
-      value: interactionBar
-      objectReference: {fileID: 0}
     - target: {fileID: 7454489405729284736, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7454489405729284736, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8929780292094754549, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8929780292094754549, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
