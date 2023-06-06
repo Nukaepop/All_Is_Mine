@@ -110,7 +110,7 @@ public class PlayerInventory : MonoBehaviour
 
         void StartInteracting()
         {
-            if (!isInteracting)
+            if (!isInteracting && nearestObject != null)
             {
                 isInteracting = true;
                 currentInteractionTime = 0.0f;
@@ -120,7 +120,7 @@ public class PlayerInventory : MonoBehaviour
 
         void StopInteracting()
         {
-            if (isInteracting)
+            if (isInteracting )
             {
                 isInteracting = false;
                 currentInteractionTime = 0.0f;

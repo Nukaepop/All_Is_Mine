@@ -41994,6 +41994,14 @@ PrefabInstance:
       propertyPath: textMeshProComponentWeight
       value: 
       objectReference: {fileID: 1757767913}
+    - target: {fileID: 7454489405729284736, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454489405729284736, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
 --- !u!1 &1145289756
