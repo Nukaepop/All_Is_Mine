@@ -987,9 +987,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8623818063861088901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 0, z: 0}
+  m_LocalPosition: {x: 0.7, y: 0.0064, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8623818064362683616}
   m_Father: {fileID: 8623818064191515091}
@@ -1435,7 +1435,7 @@ MonoBehaviour:
   attackDistance: 1.25
   attackRange: 2.25
   attackCooldown: 1
-  stanceDuration: 0.8
+  stanceDuration: 0.5
   patrolSpeed: 3.5
   waypoints:
   - {fileID: 0}
@@ -1495,7 +1495,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.03116846, y: -0.022668093}

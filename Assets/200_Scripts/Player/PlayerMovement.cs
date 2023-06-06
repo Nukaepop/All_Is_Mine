@@ -300,7 +300,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = dashDirection * dashSpeed;
         }
-        else if(!weaponParentScript.isAttacking)
+        else if(weaponParentScript.isAttacking)
+        {
+            rb.velocity = new Vector2(moveDirection.x * 0, moveDirection.y * 0);
+            dashSpeed = baseDashSpeed;
+        }
+        else
         {
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
             dashSpeed = baseDashSpeed;
