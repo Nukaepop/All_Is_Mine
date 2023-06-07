@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0d448063828084b89d759ef8aa79da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponDamage: 3
+  weaponDamage: 2
   itemsLost: 0
   playerInventoryScript: {fileID: 0}
   playerMovementScript: {fileID: 0}
@@ -1401,7 +1401,7 @@ MonoBehaviour:
   transform: {fileID: 8956344907588872642}
   arrowSprite: {fileID: 8623818065071746771}
   attackBarScript: {fileID: 726735874}
-  detectionRange: 6.5
+  detectionRange: 5.25
   attackDistance: 0.7
   attackRange: 2.2
   attackCooldown: 1

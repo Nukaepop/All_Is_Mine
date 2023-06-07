@@ -19,6 +19,8 @@ public class PlayerInventory : MonoBehaviour
 
     public GameObject projectile;
 
+
+    public Image Enclume1, Enclume2, Enclume3;
     public float TotalWeight = 0f;
 
     public int bagSize;
@@ -134,6 +136,35 @@ public class PlayerInventory : MonoBehaviour
         {
             LoseItems();
         }
+
+        if(bagSize >=1)
+        {
+            Enclume1.color = new Color(0.85f, 0.85f, 0.85f);
+        }
+        else
+        {
+            Enclume1.color = new Color(0.15f,0.15f,0.15f);
+        }
+        if (bagSize >= 2)
+        {
+            Enclume2.color = new Color(0.85f, 0.85f, 0.85f);
+        }
+        else
+        {
+            Enclume2.color = new Color(0.15f, 0.15f, 0.15f);
+        }
+        if (bagSize >= 3)
+        {
+            Enclume3.color = new Color(0.85f, 0.85f, 0.85f);
+        }
+        else
+        {
+            Enclume3.color = new Color(0.15f, 0.15f, 0.15f);
+        }
+
+
+
+
     }
     private void LateUpdate()
     {
