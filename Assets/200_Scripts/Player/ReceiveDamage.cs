@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ReceiveDamage : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class ReceiveDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy" && !playerMovementScript.isInvincible)
+        if (other.tag == "Player" && !playerMovementScript.isInvincible)
         {
             playerAnimator.SetTrigger("DamageReceived");
             Debug.Log("Collisions avec le joueur");
@@ -37,7 +38,7 @@ public class ReceiveDamage : MonoBehaviour
             }
             else // Si le sac est vide
             {
-                Debug.Log("DEAD");
+                SceneManager.LoadScene("Level1");
             }
         }
     }

@@ -158,6 +158,18 @@ PrefabInstance:
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: player
       value: 
@@ -300,6 +312,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665377235}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
@@ -722,6 +746,18 @@ PrefabInstance:
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: player
       value: 
@@ -900,6 +936,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665377235}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
@@ -1455,6 +1503,18 @@ PrefabInstance:
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: player
       value: 
@@ -1713,6 +1773,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665377235}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
@@ -1988,6 +2060,18 @@ PrefabInstance:
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: player
       value: 
@@ -2209,6 +2293,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665377235}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
@@ -6449,6 +6545,18 @@ PrefabInstance:
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: player
       value: 
@@ -7152,6 +7260,18 @@ PrefabInstance:
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: player
       value: 
@@ -7647,6 +7767,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665377235}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
@@ -40900,6 +41032,18 @@ PrefabInstance:
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: player
       value: 
@@ -41688,6 +41832,18 @@ PrefabInstance:
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: player
       value: 
@@ -41954,6 +42110,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 143273309, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080354303, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048529407, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 917037197784156749, guid: 445eba59be8edbe43822bb58c8b0e314, type: 3}
       propertyPath: dashSpeed
       value: 9
@@ -48006,6 +48174,18 @@ PrefabInstance:
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: player
       value: 
@@ -49458,6 +49638,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665377235}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
@@ -102354,6 +102546,18 @@ PrefabInstance:
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: player
       value: 
@@ -102506,6 +102710,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665377235}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
@@ -103119,6 +103335,18 @@ PrefabInstance:
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
     - target: {fileID: 8623818064834976706, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: player
       value: 
@@ -103277,6 +103505,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665377235}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
@@ -103600,6 +103840,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665377235}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
@@ -119344,6 +119596,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665377235}
     - target: {fileID: 1661483529, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerInventoryScript
+      value: 
+      objectReference: {fileID: 1912124035}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1912124038}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1665377235}
+    - target: {fileID: 2628798346515628556, guid: f159a88820cd4464294516dd8c866ab9, type: 3}
       propertyPath: playerInventoryScript
       value: 
       objectReference: {fileID: 1912124035}
