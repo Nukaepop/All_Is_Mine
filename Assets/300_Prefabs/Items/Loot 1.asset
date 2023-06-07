@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Loot 1
   m_EditorClassIdentifier: 
   id: 3
-  itemName: Loot 1
-  value: 8
+  itemName: Corpse
+  value: 20
   Object: {fileID: 7992054442429218181, guid: a37fb42b6b1f02a4a8c81ff3293bf565, type: 3}
-  weight: 3
+  weight: 1
   dropRate: 0

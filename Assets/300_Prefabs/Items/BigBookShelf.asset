@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 101
   itemName: Big Bookshelf
-  value: 400
+  value: 50
   Object: {fileID: 6986971087601384705, guid: 1eebe8d8ce4c9ca47832364386fe112c, type: 3}
-  weight: 9
+  weight: 6
   dropRate: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 105
   itemName: Candlestick
-  value: 50
+  value: 75
   Object: {fileID: 6225269821594590682, guid: a2c3a926645590445b4003fbc77f539f, type: 3}
   weight: 1
   dropRate: 0

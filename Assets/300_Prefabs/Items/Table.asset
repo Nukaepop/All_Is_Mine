@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 103
   itemName: Table
-  value: 25
+  value: 30
   Object: {fileID: 1351534023060511391, guid: 5bd6debcde64b7c438a21bd2c6f5b4b4, type: 3}
   weight: 3
   dropRate: 0

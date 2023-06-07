@@ -21,7 +21,14 @@ public class PlayerInventory : MonoBehaviour
 
 
     public Image Enclume1, Enclume2, Enclume3;
+    public TextMeshProUGUI TextEnclume1, TextEnclume2, TextEnclume3;
     public float TotalWeight = 0f;
+
+
+    public int TotalValue = 0;
+    private int bagValue;
+    public Image Sac;
+    public Sprite Sprite1, Sprite2, Sprite3, Sprite4;
 
     public int bagSize;
     public Transform BagTransform;
@@ -140,30 +147,51 @@ public class PlayerInventory : MonoBehaviour
         if(bagSize >=1)
         {
             Enclume1.color = new Color(0.85f, 0.85f, 0.85f);
+            TextEnclume1.color = Color.black;
         }
         else
         {
             Enclume1.color = new Color(0.15f,0.15f,0.15f);
+            TextEnclume1.color = Color.white;
         }
         if (bagSize >= 2)
         {
             Enclume2.color = new Color(0.85f, 0.85f, 0.85f);
+            TextEnclume2.color = Color.black;
         }
         else
         {
             Enclume2.color = new Color(0.15f, 0.15f, 0.15f);
+            TextEnclume2.color = Color.white;
         }
         if (bagSize >= 3)
         {
             Enclume3.color = new Color(0.85f, 0.85f, 0.85f);
+            TextEnclume3.color = Color.black;
         }
         else
         {
             Enclume3.color = new Color(0.15f, 0.15f, 0.15f);
+            TextEnclume3.color = Color.white;
         }
 
 
-
+        if (bagValue == 0)
+        {
+            Sac.sprite = Sprite1;
+        }
+        else if (bagValue == 1)
+        {
+            Sac.sprite = Sprite2;
+        }
+        else if (bagValue == 2)
+        {
+            Sac.sprite = Sprite3;
+        }
+        else 
+        {
+            Sac.sprite = Sprite4;
+        }
 
     }
     private void LateUpdate()
@@ -209,19 +237,13 @@ public class PlayerInventory : MonoBehaviour
             Item item = nearestObject.GetComponent<ItemController>().Item;
             Inventory.Add(item);
 
-            textMeshProComponentCount.text = Inventory.Count.ToString();
 
-            if (Inventory.Count == 0)
-            {
-                textMeshProComponentCount.color = Color.red;
-            }
-            else
-            {
-                textMeshProComponentCount.color = Color.blue;
-            }
 
             TotalWeight = CalculateTotalWeight();
             bagSize = CalculateBagSize();
+            TotalValue = CalculateTotalValue();
+            bagValue = CalculateValueThreshold();
+
             Destroy(nearestObject);
             objetsEnCollision.Remove(nearestObject);
 
@@ -261,16 +283,7 @@ public class PlayerInventory : MonoBehaviour
         Inventory.Remove(ItemALancer);
         projectile = ItemALancer.Object;
 
-        textMeshProComponentCount.text = Inventory.Count.ToString();
 
-        if (Inventory.Count == 0)
-        {
-            textMeshProComponentCount.color = Color.red;
-        }
-        else
-        {
-            textMeshProComponentCount.color = Color.blue;
-        }
 
         float raycastDistance = 2f; // Distance maximale pour le raycast
         int maxAttempts = 10; // Nombre maximum de tentatives pour trouver une position sans collision
@@ -309,6 +322,8 @@ public class PlayerInventory : MonoBehaviour
 
         TotalWeight = CalculateTotalWeight();
         bagSize = CalculateBagSize();
+        TotalValue = CalculateTotalValue();
+        bagValue = CalculateValueThreshold();
     }
 
     #endregion
@@ -381,9 +396,59 @@ public class PlayerInventory : MonoBehaviour
 
 
 
-    #endregion
+    public int CalculateTotalValue()
+    {
+        int _TotalValue = 0;
 
-    public void ShowDamage(string text)
+        foreach (Item item in Inventory)
+        {
+            _TotalValue += item.value;
+
+        }
+        TotalValue = _TotalValue;
+        Debug.Log("Valeur :" + TotalValue);
+
+        textMeshProComponentCount.text = TotalValue.ToString();
+
+        if (TotalValue <= 0)
+        {
+            textMeshProComponentCount.color = Color.red;
+        }
+        else
+        {
+            textMeshProComponentCount.color = Color.blue;
+        }
+
+        return TotalValue;
+    }
+
+    public int CalculateValueThreshold()
+    {
+        int _bagValue = 0;
+
+        if (TotalValue < 200)
+        {
+            _bagValue = 0;
+        }
+        else if (TotalValue >= 200 && TotalValue < 400)
+        {
+            _bagValue = 1;
+        }
+        else if (TotalValue >= 400 && TotalValue < 800)
+        {
+            _bagValue = 2;
+        }
+        else
+        {
+            _bagValue = 3;
+        }
+
+        bagValue = _bagValue;
+        return bagValue;
+    }
+        #endregion
+
+        public void ShowDamage(string text)
     {
         if (floatingTextPrefab)
         {
