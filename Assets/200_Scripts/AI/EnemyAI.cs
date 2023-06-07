@@ -10,6 +10,8 @@ public class EnemyAI : MonoBehaviour
     public Transform transform;
     private Vector2 weaponDirection;
 
+    public SpriteRenderer arrowSprite;
+
     [SerializeField] AttackBar attackBarScript;
 
     public float detectionRange = 10f; // Portée de détection du joueur
@@ -110,6 +112,15 @@ public class EnemyAI : MonoBehaviour
         else
         {
             StartPatrol();
+        }
+
+        if(playerDetected)
+        {
+            arrowSprite.color = Color.red;
+        }
+        else
+        {
+            arrowSprite.color = Color.white;
         }
 
     }
