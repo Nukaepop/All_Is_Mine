@@ -34,6 +34,8 @@ public class EnemyAI : MonoBehaviour
     private bool hasCooldown = true;
     private bool isMovingToPlayer = false;
 
+    private bool inStance;
+
     public Animator animator;
     public Animator weaponAnimator;
 
@@ -67,7 +69,7 @@ public class EnemyAI : MonoBehaviour
             StopPatrol();
             MoveTowardsPlayer();
 
-            if (!isAttacking )
+            if (!isAttacking && hasCooldown && !inStance)
             {
                 //arme qui suis le joueur
                 Vector3 difference = player.position - enemyWeapon.position;
@@ -82,7 +84,7 @@ public class EnemyAI : MonoBehaviour
                 Attack();
                 currentStanceTime += Time.deltaTime;
                 attackBarScript.UpdateAttackBar(currentStanceTime, stanceDuration);
-                navMeshAgent.speed = 0f;
+                navMeshAgent.speed = 1f;
             }
 
             isPlayerInView = true;
@@ -221,11 +223,19 @@ public class EnemyAI : MonoBehaviour
 
     private IEnumerator AttackStance()
     {
+
+        inStance = true;
+
         attackBarScript.ShowAttackBar();
         yield return new WaitForSeconds(stanceDuration);
         attackBarScript.HideAttackBar();
 
-        if(distanceToPlayer <= attackRange)
+        inStance = false;
+
+        navMeshAgent.speed = 0f;
+
+
+        if (distanceToPlayer <= attackRange)
         {
             weaponAnimator.SetBool("isAttacking", true);
             isAttacking = true;

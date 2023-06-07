@@ -151,6 +151,8 @@ public class PlayerMovement : MonoBehaviour
         dashSpeed = baseDashSpeed;
 
         animator.SetBool("isRolling", false);
+
+        invincibilityDuration = rollDuration;
     }
 
     // Update is called once per frame
