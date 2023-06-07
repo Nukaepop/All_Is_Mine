@@ -233,7 +233,7 @@ public class PlayerMovement : MonoBehaviour
 
         moveDirection = new Vector2(moveX, moveY).normalized;
 
-        if(Input.GetKeyDown(rollKey) && !isRolling && hasStamina)
+        if(Input.GetKeyDown(rollKey) && !isRolling && hasStamina && !weaponParentScript.isAttacking)
         {
             dashDirection = GetDashDirection();
             StartCoroutine(PerformRoll());

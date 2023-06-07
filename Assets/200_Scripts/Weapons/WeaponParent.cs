@@ -36,7 +36,7 @@ public class WeaponParent : MonoBehaviour
 
     private void LateUpdate()
     {
-        attackDelay = baseDelay + playerInventoryScript.bagSize * 0.3f;
+        attackDelay = baseDelay + playerInventoryScript.bagSize * 0.5f;
         animator.speed = 1 - playerInventoryScript.bagSize * 0.15f;
     }
 

@@ -1405,6 +1405,7 @@ MonoBehaviour:
   attackDistance: 0.7
   attackRange: 2.2
   attackCooldown: 1
+  attackDuration: 0.5
   stanceDuration: 0.6
   patrolSpeed: 3.5
   waypoints:

@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour
 
     public float attackRange;
     public float attackCooldown;
+    public float attackDuration;
     public float stanceDuration;
     private float currentStanceTime = 0f;
 
@@ -223,10 +224,10 @@ public class EnemyAI : MonoBehaviour
         hasCooldown = false;
         isAttacking = false;
 
-
-            yield return new WaitForSeconds(attackCooldown);
-
         weaponAnimator.SetBool("isAttacking", false);
+        yield return new WaitForSeconds(attackCooldown);
+
+
 
         hasCooldown = true;
 
@@ -250,6 +251,7 @@ public class EnemyAI : MonoBehaviour
         {
             weaponAnimator.SetBool("isAttacking", true);
             isAttacking = true;
+            yield return new WaitForSeconds(attackDuration);
             // Ajoutez ici votre logique d'attaque
             // Par exemple, déclencher une animation d'attaque, infliger des dégâts au joueur, etc.
             Debug.Log("IA attaque");

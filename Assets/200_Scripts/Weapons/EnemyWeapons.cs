@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyWeapons : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class EnemyWeapons : MonoBehaviour
             }
             else // Si le sac est vide
             {
-                Debug.Log("DEAD");
+                SceneManager.LoadScene("Level1");
             }
         }
     }
