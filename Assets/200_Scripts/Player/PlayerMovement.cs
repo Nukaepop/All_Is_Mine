@@ -200,7 +200,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        MaxStamina = baseMaxStamina - InventoryScript.bagSize * 15;
+        MaxStamina = baseMaxStamina - InventoryScript.bagSize * 25;
 
         if(!hasStamina)
         {
