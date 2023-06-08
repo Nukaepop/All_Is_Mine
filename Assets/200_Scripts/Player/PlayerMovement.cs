@@ -65,7 +65,12 @@ public class PlayerMovement : MonoBehaviour
 
     public float MaxStamina;
     public float currentStamina;
+
     public float staminaRecoveryRate;
+    public float staminaRecoveryRateHasStamina;
+    public float staminaRecoveryRateNoStamina;
+    public float baseStaminaRecoveryRate;
+
     public float baseMaxStamina;
 
     private bool hasStamina = true;
@@ -153,6 +158,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isRolling", false);
 
         invincibilityDuration = rollDuration;
+
+        staminaRecoveryRate = baseStaminaRecoveryRate;
     }
 
     // Update is called once per frame
@@ -207,10 +214,12 @@ public class PlayerMovement : MonoBehaviour
             // Faire clignoter la barre de stamina en rouge
             float alpha = Mathf.PingPong(Time.time * 3f, 1f); // Contrôle la transparence (alpha) en utilisant une fonction de ping-pong
             staminaBar.color = new Color(1f, 0f, 0f, alpha); // Définit la couleur de la barre de stamina en rouge avec l'alpha calculé
+            staminaRecoveryRate = staminaRecoveryRateNoStamina;
         }
         else
         {
             staminaBar.color = new Color(0f, 1f, 0f, 1);
+            staminaRecoveryRate = staminaRecoveryRateHasStamina;
         }
     }
 

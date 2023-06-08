@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 143273312}
   - component: {fileID: 143273313}
   - component: {fileID: 143273314}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: BagWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1080354304}
   - component: {fileID: 1080354305}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: BagContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5232,7 +5232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048529410}
   - component: {fileID: 2048529409}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Bag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5397,6 +5397,7 @@ GameObject:
   - component: {fileID: 6754937888544410552}
   - component: {fileID: 917037198844540316}
   - component: {fileID: 917037198844540309}
+  - component: {fileID: 1912124041}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -5414,7 +5415,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.9, y: 1.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9211983455028859400}
   - {fileID: 1080354304}
@@ -5512,15 +5513,15 @@ MonoBehaviour:
   rollKey: 32
   InventoryScript: {fileID: 6754937888544410552}
   animator: {fileID: 917037198844540309}
-  WalkSpeed: 5
+  WalkSpeed: 4.25
   dust: {fileID: 2021748617}
   SprintSpeed: 9
   SprintStaminaCostRate: 20
   rollDuration: 0.5
   isRolling: 0
-  dashSpeed: 9
-  baseDashSpeed: 9
-  RollStaminaCost: 20
+  dashSpeed: 7
+  baseDashSpeed: 7
+  RollStaminaCost: 25
   rb: {fileID: 917037197784156787}
   characterTransform: {fileID: 917037197784156785}
   spriteRenderer: {fileID: 917037197784156786}
@@ -5531,7 +5532,7 @@ MonoBehaviour:
   isFacingRight: 0
   MaxStamina: 100
   currentStamina: 100
-  staminaRecoveryRate: 10
+  staminaRecoveryRate: 8.25
   baseMaxStamina: 100
   isUsingStamina: 0
   staminaBar: {fileID: 0}
@@ -5564,14 +5565,14 @@ MonoBehaviour:
   TotalWeight: 0
   TotalValue: 0
   Sac: {fileID: 0}
-  Sprite1: {fileID: 0}
-  Sprite2: {fileID: 0}
-  Sprite3: {fileID: 0}
-  Sprite4: {fileID: 0}
+  Sprite1: {fileID: 21300000, guid: 8da075085cfa47e4a968db82c65b413f, type: 3}
+  Sprite2: {fileID: 21300000, guid: b0a17fc20fae3c04c9c7647bdb5a678e, type: 3}
+  Sprite3: {fileID: 21300000, guid: a63c51572e0081948a9e86329aa36580, type: 3}
+  Sprite4: {fileID: 21300000, guid: e5210d898b1e6d24588c98a810c9a09f, type: 3}
   bagSize: 0
   BagTransform: {fileID: 617710172}
   canPickup: 1
-  interactionTime: 2
+  interactionTime: 0.55
   textMeshProObjectWeight: {fileID: 0}
   textMeshProObjectCount: {fileID: 0}
   textMeshProComponentWeight: {fileID: 0}
@@ -5615,6 +5616,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1912124041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917037197784156751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ea5b120dbb43842b4c9028e385630d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInventoryScript: {fileID: 6754937888544410552}
+  playerMovementScript: {fileID: 917037197784156749}
+  playerAnimator: {fileID: 917037198844540309}
+  itemsLost: 0
 --- !u!1 &2128282558010246769
 GameObject:
   m_ObjectHideFlags: 0
