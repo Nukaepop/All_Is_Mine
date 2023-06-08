@@ -5295,8 +5295,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.5, g: 0.31569213, b: 0.054245293, a: 1}
+  m_Sprite: {fileID: 21300000, guid: bc720131967419840a1e08f150dec72f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5555,7 +5555,19 @@ MonoBehaviour:
   Inventory: []
   nearestObject: {fileID: 0}
   projectile: {fileID: 0}
+  Enclume1: {fileID: 0}
+  Enclume2: {fileID: 0}
+  Enclume3: {fileID: 0}
+  TextEnclume1: {fileID: 0}
+  TextEnclume2: {fileID: 0}
+  TextEnclume3: {fileID: 0}
   TotalWeight: 0
+  TotalValue: 0
+  Sac: {fileID: 0}
+  Sprite1: {fileID: 0}
+  Sprite2: {fileID: 0}
+  Sprite3: {fileID: 0}
+  Sprite4: {fileID: 0}
   bagSize: 0
   BagTransform: {fileID: 617710172}
   canPickup: 1
