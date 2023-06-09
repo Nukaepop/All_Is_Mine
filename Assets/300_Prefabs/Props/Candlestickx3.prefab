@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 455787185, guid: d9a314070860f0f479404bb9c414520d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ed3fbc56dba9cf49998e8fc0678cd43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +105,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 1.125, y: 2.125}
     newSize: {x: 0.48, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788559013c2d3424ba123a84bad2e1a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSprite: {fileID: 455787185, guid: d9a314070860f0f479404bb9c414520d, type: 3}
+  defaultSprite: {fileID: 21300000, guid: 6ed3fbc56dba9cf49998e8fc0678cd43, type: 3}
   outlinedSprite: {fileID: 21300000, guid: eb228d7a7ddb6844382de146edc4a1bd, type: 3}
   Object: {fileID: 8846488914590214142}
   inventoryScript: {fileID: 0}
