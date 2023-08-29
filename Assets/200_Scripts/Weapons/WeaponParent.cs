@@ -11,6 +11,7 @@ public class WeaponParent : MonoBehaviour
     private float delay;
     public float baseDelay;
     public float attackDelay;
+    public ParticleSystem drops;
 
     public Transform TransformWeaponParent;
     public Transform playerTransform;
@@ -107,6 +108,7 @@ public class WeaponParent : MonoBehaviour
         if(delay > 0)
         {
             delay -= Time.deltaTime;
+            CreateDrops();
         }
 
     }
@@ -144,5 +146,9 @@ public class WeaponParent : MonoBehaviour
         }
     }
 
+    void CreateDrops()
+    {
+        drops.Play();
+    }
 
 }
