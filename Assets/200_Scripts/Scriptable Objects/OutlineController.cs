@@ -26,6 +26,7 @@ public class OutlineController : MonoBehaviour
         if(Object == inventoryScript.nearestObject)
         {
             spriteRenderer.sprite = outlinedSprite;
+            Debug.Log(" ouais ouais outline");
         }
         else
         {
